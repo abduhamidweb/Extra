@@ -1,9 +1,71 @@
 .cardWrapper {
-  background: red;
-  margin: 20px 0px;
+  margin: 58px 0px;
+
   .card {
-    padding: 24px 40px;
     background: #1f1d2b;
     border-radius: 16px;
+    text-align: center;
+    padding: 24px 40px;
+    .MainCardImg {
+      margin: auto;
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      overflow: hidden;
+      //   transform: translateY(-80px);
+      margin-top: -70px;
+    }
+    .card-body {
+      padding: 0px;
+      text-align: center;
+      margin: auto;
+      h5 {
+        margin: 14px auto;
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        max-width: 144px;
+
+        /* or 18px */
+
+        text-align: center;
+
+        /* White */
+
+        color: #ffffff;
+      }
+      .price {
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        /* identical to box height, or 20px */
+
+        text-align: center;
+
+        /* White */
+
+        color: #ffffff;
+      }
+      p {
+        max-width: 144px;
+        margin:  8px auto;
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        /* identical to box height, or 20px */
+
+        text-align: center;
+
+        /* Text/Light */
+
+        color: #abbbc2;
+      }
+    }
   }
 }
