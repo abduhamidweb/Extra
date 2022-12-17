@@ -10,7 +10,7 @@ const PageTitle = ({ input, title, date }) => {
             <h2>{title}</h2>
             <p>{date ? date : ""}</p>
           </div>
-          <div className="col-4">{input ? <Input /> : ""}</div>
+          <div className="col-6 text-end">{input ? <Input /> : ""}</div>
         </div>
       </section>
 
