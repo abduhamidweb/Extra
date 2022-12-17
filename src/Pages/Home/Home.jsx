@@ -1,4 +1,5 @@
 import React from "react";
+import OrdersHome from "../../Components/OrdersHome/OrdersHome";
 import PageTitle from "../../Components/PageTitile/PageTitle";
 import SettingList from "../../Components/SettingList/SettingList";
 
@@ -16,7 +17,17 @@ const Home = () => {
 
           {/* Muhammadamin */}
         </div>
-        <div className="col-4 p-5 bg-info"></div>
+        <div className="col-4 px-2">
+<div className="ordersWrapp">
+  {/* <h3 className="ordersTitle">
+  Orders 
+  </h3> */}
+  <OrdersHome/>
+</div>
+
+
+
+        </div>
       </div>
     </div>
   );
