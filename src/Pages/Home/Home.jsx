@@ -6,12 +6,18 @@ import "./style.scss";
 const Home = () => {
   return (
     <div>
-      <PageTitle
-        input={"input put"}
-        title="Jaegar Resto"
-        date="Tuesday, 2 Feb 2021"
-      />
+      <div className="row">
+        <div className="col-8">
+          <PageTitle
+            input={"input put"}
+            title="Jaegar Resto"
+            date="Tuesday, 2 Feb 2021"
+          />
 
+          {/* Muhammadamin */}
+        </div>
+        <div className="col-4 p-5 bg-info"></div>
+      </div>
     </div>
   );
 };
