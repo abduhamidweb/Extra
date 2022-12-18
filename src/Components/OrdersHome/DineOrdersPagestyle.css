@@ -1,0 +1,93 @@
+
+
+
+/* ordersCard */
+.orderFoodImg{
+    width: 50px;
+}
+.orderTitle{
+    font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 130%;
+color: #FFFFFF;
+}
+.orderPriceText{
+    font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 140%;
+color: #ABBBC2;
+padding-top: 4px;
+}
+.ordersInfo{
+    width: 70%;
+}
+.orderQtywrapp{
+    width: 30%;
+}
+.qtySize, .priceSize{
+width: 50%;
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 140%;
+
+color: #FFFFFF;
+}
+.qtySize{
+    text-align: center;
+    background: #2D303E;
+    padding: 14px 14px 12px;
+border: 1px solid #393C49;
+border-radius: 8px;
+}
+.priceSize{
+    text-align: right;
+}
+.orderInputWrapp{
+    width: 85%;
+}
+.orderBynWrapp{
+    width: 15%;
+    display: flex;
+    justify-content: end;
+}
+.orderDescInput{
+    background: #2D303E;
+    padding: 14px 96px 14px 14px;
+    border: 1px solid #393C49;
+    color: #fff;
+border-radius: 8px;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+outline: none;
+}
+.orderDescInput:focus{
+    border: 1px solid #393C49;
+    outline: none;
+}
+.deleteCardBtn{
+    border: 1px solid #FF7CA3;
+border-radius: 8px;
+padding: 14px;
+font-size: 20px;
+color: #FF7CA3;
+}
+.deleteCardBtn:hover{
+    background-color: #FF7CA3 !important;
+    color: #fff !important;
+}
+.deleteCardBtn:active{
+    border: 1px solid #FF7CA3 !important;
+    color: #FF7CA3 !important;
+    background-color: transparent !important;
+}
+.orderCardWrapp, .toGoPage, .deliveryPage{
+    height: 55vh;
+    overflow-y: scroll;
+}

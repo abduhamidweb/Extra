@@ -1,10 +1,12 @@
 import React from 'react';
-
+import "./style.scss"
 const MainCard = () => {
     return (
-        <>
-            <h1>Card</h1>
-        </>
+      <>
+        <div className="col-4 text-center cardWrapper">
+          <div className="card">Card</div>
+        </div>
+      </>
     );
 };
 

@@ -12,15 +12,22 @@ import News from "../Pages/News/News";
 import Notif from "../Pages/Notif/Notif";
 import Percent from "../Pages/Percentage/Persen";
 import Setting from "../Pages/Settings/Setting";
+import OrdersToGo from "../Components/OrdersHome/OrdersToGo";
+import OrdersDelivery from "../Components/OrdersHome/OrdersDelivery";
+import OrdersHome from "../Components/OrdersHome/OrdersHome";
+import OrdersDineIn from "../Components/OrdersHome/OrdersDineIn";
 const index = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />}>
-        <Route path="/orders" element={<Home />}>
-          
+        <Route path="/" element={<OrdersDineIn />}/>
+        <Route path="/orders/togo" element={<OrdersToGo />}/>
+        <Route path="/orders/delivery" element={<OrdersDelivery />}/>
+     
+       
         </Route>
-        </Route>
+       
         <Route path="/home" element={<Home />}></Route>
         <Route path="/percentage" element={<Percent />}></Route>
         <Route path="/database" element={<DataBase />}></Route>
