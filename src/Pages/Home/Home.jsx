@@ -37,7 +37,6 @@ const Home = () => {
 
           <div className="col-4 p-4 ordersWrapp1">
             <div className="ordersWrapp2">
-
               <OrdersHome />
             </div>
           </div>
