@@ -1,7 +1,7 @@
-import React from 'react';
-import "./App.css"
-import Sidebar from './Components/SideBar/Sidebar';
-import Router from "./router"
+import React, { useEffect } from "react";
+import "./App.css";
+import Sidebar from "./Components/SideBar/Sidebar";
+import Router from "./router";
 const App = () => {
   return (
     <>
