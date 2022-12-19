@@ -106,9 +106,10 @@
   }
 }
 .WrapperLeftPage {
-  overflow-y: scroll;
   height: 100vh;
-  padding: 20px 20px 20px 0px;
+  padding: 20px 20px 20px 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   .pagination {
     width: 70%;
     overflow-x: scroll;
@@ -180,4 +181,11 @@
     background: #1f1d2b;
     height: 100vh;
   }
+}
+.ordersWrapp1{
+  background: #1f1d2b;
+  height: 100vh;
+}
+.WrapperCard{
+  padding: 20px 0;
 }

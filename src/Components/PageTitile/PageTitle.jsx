@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import Input from "../Input/Input";
 import "./style.css";
 import context from "../../context/context";
+import HotDishes from "../../Pages/Home/HomeNavigatePages/HotDishes";
 const PageTitle = ({ input, title, date, icon }) => {
   const [inputValue, setInputValue] = useState("");
-  const { fetchByName } = useContext(context);
+  // const { fetchByName } = useContext(context);
 // fetchByName(inputValue)
   // console.log(fetchByName("a"));
   // fetchByName(inputValue)
@@ -32,6 +33,7 @@ const PageTitle = ({ input, title, date, icon }) => {
                   // value={inputValue}
                   onChange={(e) => {
                     fetchByName(e.target.value)
+                    
                   }}
                 />
               ) : (
