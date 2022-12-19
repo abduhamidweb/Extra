@@ -12,11 +12,11 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [test, setTest] = useState("Test");
   const ErrorPage = useRef();
-  // All Category
+  // All Categorys
   const fetchCategory = async () => {
     const res = await API.getAllCategorys();
     setCategory(res.categories);
-    
+
     setLoading(true);
   };
   // Category Items
