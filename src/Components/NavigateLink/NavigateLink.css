@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+.list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 32px;
+
+}
+
+.item {
+    list-style-type: none;
+    position: relative;
+}
+
+.link {
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.link:active {
+    color: white !important;
+}
+
+.link:hover {
+    color: white !important;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: #393C49;
+    margin-top: 20px;
+}
+
+.home-links:active {
+    color: white !important;
+
+}
+
+.home-links:hover {
+    color: white !important;
+    text-decoration: none;
+
+}
+
+.activee {
+    color: #EA7C69;
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.activee::before {
+    content: ' ';
+    position: absolute;
+    top: 48px;
+    width: 55px;
+    height: 5px;
+    background: #EA7C69;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+.NavigateLine{
+    width: 100%;
+    height: 3px;
+    background-color: #393C49;
+}

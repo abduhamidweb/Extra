@@ -16,6 +16,7 @@ const Home = () => {
   const fetchCategory = async () => {
     const res = await API.getAllCategorys();
     setCategory(res.categories);
+    
     setLoading(true);
   };
   // Category Items

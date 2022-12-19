@@ -16,6 +16,7 @@ main {
   overflow-x: hidden;
   height: 100vh;
   padding: 0px 0px 0px 20px ;
+  padding: 0px 0px 0px 20px;
   width: 100% !important;
 }
 ::-webkit-scrollbar {
