@@ -18,16 +18,12 @@ import Desert from "../Pages/Home/HomeNavigatePages/Desert"
 import Grill from "../Pages/Home/HomeNavigatePages/Grill"
 import HotDishes from "../Pages/Home/HomeNavigatePages/HotDishes"
 import Soup from "../Pages/Home/HomeNavigatePages/Soup"
-
-import OrdersToGo from "../Components/OrdersHome/OrdersToGo";
-import OrdersDelivery from "../Components/OrdersHome/OrdersDelivery";
-import OrdersHome from "../Components/OrdersHome/OrdersHome";
-import OrdersDineIn from "../Components/OrdersHome/OrdersDineIn";
 const index = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />}>
+  
           <Route path="/" element={<HotDishes />} />
           <Route path="/colddishes" element={<Colddishes />} />
           <Route path="/soup" element={<Soup />} />
@@ -35,11 +31,9 @@ const index = () => {
           <Route path="/appetizer" element={<Appetizer />} />
           <Route path="/desert" element={<Desert />} />
 
-          {/* <Route path="/home" element={<Home />}></Route> */}
-          <Route path="/" element={<OrdersDineIn />} />
-          <Route path="/orders/togo" element={<OrdersToGo />} />
-          <Route path="/orders/delivery" element={<OrdersDelivery />} />
+
         </Route>
+
         <Route path="/home" element={<Home />}></Route>
         <Route path="/percentage" element={<Percent />}></Route>
         <Route path="/database" element={<DataBase />}></Route>

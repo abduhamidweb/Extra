@@ -1,107 +1,211 @@
-.OrdersTitle{
-    color: #FFFFFF;
-    font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 140%;
+.OrdersTitle {
+  color: #ffffff;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
 }
-.ordersLinkTitle{
-    font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 140%;
-color: #EA7C69;
-border: 1px solid #393C49;
-border-radius: 8px;
-padding: 7px 12px;
-margin-right: 10px;
+
+
+
+/* ordersCard */
+.orderFoodImg{
+  width: 50px;
 }
-.ordersLinkTitle:hover{
-    color: #EA7C69;
-    text-decoration: none;
-}
-.activeOrdersLinks{
-    font-family: 'Barlow';
+.orderTitle{
+  font-family: 'Barlow';
 font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 140%;
+font-weight: 500;
+font-size: 16px;
+line-height: 130%;
 color: #FFFFFF;
-background: #EA7C69;
-border: 1px solid transparent;
-border-radius: 8px;
-padding: 7px 12px;
-margin-right: 10px;
 }
-.activeOrdersLinks:hover{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-.itemTitleWrapp{
-    width: 70%;
-    
-}
-.qtyPriceTitleWrapp{
-    width: 30%;
-   
-}
-.ordersTitles{
-    color: #fff;
-    font-family: 'Barlow';
+.orderPriceText{
+  font-family: 'Barlow';
 font-style: normal;
-font-weight: 600;
-font-size: 18px;
+font-weight: 500;
+font-size: 14px;
 line-height: 140%;
+color: #ABBBC2;
+padding-top: 4px;
 }
-.qtyTitle{
-    width: 50%;
-    text-align: center;
+.ordersInfo{
+  width: 70%;
 }
-.priceTitle{
-    width: 50%;
-    text-align:right;
+.orderQtywrapp{
+  width: 30%;
 }
-
-.ordersAllInfo{
-    border-top: 1px solid rgba(255, 255, 255, 0.235);
-}
-
-.discountTitle, .totaltTitle{
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    color: #ABBBC2;
-}
-.totalPriceTitle, .discountPriceTitle{
-    font-family: 'Barlow';
+.qtySize, .priceSize{
+width: 50%;
+font-family: 'Barlow';
 font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 140%;
+
 color: #FFFFFF;
 }
-.navigateToPayPage{
-    background: #EA7C69;
-box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3) !important;
+.qtySize{
+  text-align: center;
+  background: #2D303E;
+  padding: 14px 14px 12px;
+border: 1px solid #393C49;
+border-radius: 8px;
+}
+.priceSize{
+  text-align: right;
+}
+.orderInputWrapp{
+  width: 85%;
+}
+.orderBynWrapp{
+  width: 15%;
+  display: flex;
+  justify-content: end;
+}
+.orderDescInput{
+  background: #2D303E;
+  padding: 14px 96px 14px 14px;
+  border: 1px solid #393C49;
+  color: #fff;
+border-radius: 8px;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+outline: none;
+}
+.orderDescInput:focus{
+  border: 1px solid #393C49;
+  outline: none;
+}
+.deleteCardBtn{
+  border: 1px solid #FF7CA3;
 border-radius: 8px;
 padding: 14px;
-color: #fff;
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 140%;
+font-size: 20px;
+color: #FF7CA3;
 }
-.navigateToPayPage:hover{
-    color: #fff;
-    background: #fea191;
-    box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3) !important;
+.deleteCardBtn:hover{
+  background-color: #FF7CA3 !important;
+  color: #fff !important;
 }
-.navigateToPayPage:active{
-color: #EA7C69 !important;
+.deleteCardBtn:active{
+  border: 1px solid #FF7CA3 !important;
+  color: #FF7CA3 !important;
+  background-color: transparent !important;
+}
+.orderCardWrapp, .toGoPage, .deliveryPage{
+  height: 55vh;
+  overflow-y: scroll;
 }
 
+.ordersLinkTitle:hover {
+  color: #ea7c69;
+  text-decoration: none;
+}
+
+.activeOrdersLinks:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.itemTitleWrapp {
+  width: 70%;
+}
+.qtyPriceTitleWrapp {
+  width: 30%;
+}
+.ordersTitles {
+  color: #fff;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+}
+.qtyTitle {
+  width: 50%;
+  text-align: center;
+}
+.priceTitle {
+  width: 50%;
+  text-align: right;
+}
+
+.ordersAllInfo {
+  border-top: 1px solid rgba(255, 255, 255, 0.235);
+}
+
+.discountTitle,
+.totaltTitle {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #abbbc2;
+}
+.totalPriceTitle,
+.discountPriceTitle {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+}
+.navigateToPayPage {
+  background: #ea7c69;
+  box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3) !important;
+  border-radius: 8px;
+  padding: 14px;
+  color: #fff;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+}
+.navigateToPayPage:hover {
+  color: #fff;
+  background: #fea191;
+  box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.3) !important;
+}
+.navigateToPayPage:active {
+  color: #ea7c69 !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ea7c69;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  padding: 7px 12px;
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover{
+  text-decoration: none;
+  border: 1px solid #393c49;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  font-family: "Barlow";
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffffff;
+  background: #ea7c69;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 7px 12px;
+  margin-right: 10px;
+}
+.tabWrapp{
+  height:55vh ;
+  overflow-y: scroll;
+}

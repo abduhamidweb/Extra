@@ -11,41 +11,42 @@ import MainCard from "../../Components/MainCard/MainCard";
 import HomenavigateLink from "./HomeNavigatePages/HomenavigateLink";
 const Home = () => {
   return (
-    <main>
-      <div className="row">
-        <div className="col-8">
-          <PageTitle
-            input={"input put"}
-            title="Jaegar Resto"
-            date="Tuesday, 2 Feb 2021"
-          />
-          <NavigateLinks/>
-              <HomenavigateLink/>
-          {/* Muhammadamin */}
-          <div className="row WrapperCard">
-            <div className="col-6">
-              <h3>Choose Dishes</h3>
-            </div>
-            <div className="col-6 text-end">
-              <select name="" id="">
-                <option>Dine In</option>
-                <option>oaAwsnja</option>
-                <option>csadkbhsd</option>
-              </select>
-            </div>
-            <div className="row">
-              <MainCard />
+    <>
+      <main>
+        <div className="row">
+          <div className="col-8">
+            <PageTitle
+              input={"input put"}
+              title="Jaegar Resto"
+              date="Tuesday, 2 Feb 2021"
+            />
+            <NavigateLinks />
+            <HomenavigateLink />
+            {/* Muhammadamin */}
+            <div className="row WrapperCard">
+              <div className="col-6">
+                <h3>Choose Dishes</h3>
+              </div>
+              <div className="col-6 text-end">
+                <select name="" id="">
+                  <option>Dine In</option>
+                  <option>oaAwsnja</option>
+                  <option>csadkbhsd</option>
+                </select>
+              </div>
+              <div className="row">
+                <MainCard />
+              </div>
             </div>
           </div>
-        </div>
-        
           <div className="col-4 p-4 ordersWrapp1">
             <div className="ordersWrapp2">
               <OrdersHome />
             </div>
           </div>
-   </div>
-    </main>
+        </div>
+      </main>
+    </>
   );
 
 };
