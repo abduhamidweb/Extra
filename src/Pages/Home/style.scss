@@ -109,6 +109,26 @@
   overflow-y: scroll;
   height: 100vh;
   padding: 20px 20px 20px 0px;
+  .pagination {
+    width: 70%;
+    overflow-x: scroll;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-item {
+    background: #1f1d2b;
+    a {
+      color: white !important;
+      padding: 0.2rem 1rem !important;
+
+      &:hover {
+        background: transparent !important;
+        text-decoration: none;
+      }
+    }
+  }
   h3 {
     font-family: "Barlow";
     font-style: normal;
@@ -156,11 +176,8 @@
       color: #ffffff;
     }
   }
-.ordersWrapp1{
-  background: #1F1D2B;
-  height: 100vh;
+  .ordersWrapp1 {
+    background: #1f1d2b;
+    height: 100vh;
+  }
 }
-}
-
-
-

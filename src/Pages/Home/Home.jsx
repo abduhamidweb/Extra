@@ -12,11 +12,10 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [test, setTest] = useState("Test");
   const ErrorPage = useRef();
-  // All Categorys
+  // All Category
   const fetchCategory = async () => {
     const res = await API.getAllCategorys();
     setCategory(res.categories);
-
     setLoading(true);
   };
   // Category Items
@@ -33,6 +32,26 @@ const Home = () => {
       setCategoryItem(res.meals);
     }
   };
+  // Pagination start
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const [totalPage, setTotalPage] = useState(6);
+
+  const firstPage = currentPage * totalPage;
+
+  const lastPage = firstPage - totalPage;
+
+  const lastData = categoryItem.slice(lastPage, firstPage);
+
+  const paginate = (id) => {
+    setCurrentPage(id);
+  };
+
+  const pageNumber = [];
+  for (let i = 1; i <= Math.ceil(categoryItem.length / totalPage); i++) {
+    pageNumber.push(i);
+  }
 
   // Start fetch function
   useEffect(() => {
@@ -77,13 +96,27 @@ const Home = () => {
                 </div>
                 <div className="row" ref={ErrorPage}>
                   {loading ? (
-                    categoryItem.map((item, key) => {
+                    lastData.map((item, key) => {
                       return <MainCard key={key} data={item} />;
                     })
                   ) : (
                     <Loading />
                   )}
                 </div>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    {pageNumber.map((pageEl) => {
+                      return (
+                        <li
+                          className="page-item   rounded-5 mx-auto my-2"
+                          onClick={() => paginate(pageEl)}
+                        >
+                          <a className="page-link">{pageEl}</a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </nav>
               </div>
             </div>
             <div className="col-4 p-5 bg-info"></div>
