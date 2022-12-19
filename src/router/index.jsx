@@ -13,6 +13,12 @@ import Notif from "../Pages/Notif/Notif";
 import Percent from "../Pages/Percentage/Persen";
 import Setting from "../Pages/Settings/Setting";
 
+import Appetizer from "../Pages/Home/HomeNavigatePages/Appetizer";
+import Colddishes from "../Pages/Home/HomeNavigatePages/Colddishes";
+import Desert from "../Pages/Home/HomeNavigatePages/Desert";
+import Grill from "../Pages/Home/HomeNavigatePages/Grill";
+import HotDishes from "../Pages/Home/HomeNavigatePages/HotDishes";
+import Soup from "../Pages/Home/HomeNavigatePages/Soup";
 const index = () => {
   return (
     <>
@@ -21,6 +27,12 @@ const index = () => {
           {/* <Route path="/" element={<OrdersDineIn />} />
           <Route path="/orders/togo" element={<OrdersToGo />} />
           <Route path="/orders/delivery" element={<OrdersDelivery />} /> */}
+          <Route path="/" element={<HotDishes />} />
+          <Route path="/colddishes" element={<Colddishes />} />
+          <Route path="/soup" element={<Soup />} />
+          <Route path="/grill" element={<Grill />} />
+          <Route path="/appetizer" element={<Appetizer />} />
+          <Route path="/desert" element={<Desert />} />
         </Route>
 
         <Route path="/home" element={<Home />}></Route>
