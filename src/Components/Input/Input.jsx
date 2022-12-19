@@ -1,10 +1,16 @@
 import React from 'react';
-
-const Input = () => {
+import "./style.scss"
+const Input = ({ type, text, id, inputClass, plece, val, setValue }) => {
+    
     return (
-        <>
-            <input type="text" />
-        </>
+      <>
+            <label htmlFor={id}>
+                {
+                    text
+                }
+        </label>
+            <input type={type} id={id} className={inputClass} placeholder={plece} value={val} onChange={(e) => { setValue(e.target.value) }} />
+      </>
     );
 };
 
