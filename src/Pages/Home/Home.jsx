@@ -7,7 +7,7 @@ import "./style.scss";
 import MainCard from "../../Components/MainCard/MainCard";
 const Home = () => {
   return (
-    <div>
+    <>
       <main>
         <div className="row m-0 p-0">
           <div className="col-8 ">
@@ -42,7 +42,7 @@ const Home = () => {
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
 };
 
