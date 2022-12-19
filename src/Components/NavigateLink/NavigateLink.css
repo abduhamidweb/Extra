@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 0;
     margin-top: 32px;
+
 }
 
 .item {
@@ -54,8 +55,8 @@
 .activee::before {
     content: ' ';
     position: absolute;
-    top: 47px;
-    width: 65px;
+    top: 48px;
+    width: 55px;
     height: 5px;
     background: #EA7C69;
     opacity: 0.9;
