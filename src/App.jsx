@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-
 import "./App.css";
 import API from "./API/API";
 import context from "./context/context";
@@ -7,6 +6,10 @@ import Sidebar from "./Components/SideBar/Sidebar";
 import Router from "./router";
 import "./App.css";
 const App = () => {
+
+  function func(text){
+    console.log(text);
+  }
   const [category, setCategory] = useState([]);
   const [categoryItem, setCategoryItem] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -62,6 +65,7 @@ const App = () => {
   }, []);
 
   return (
+
     <>
       <context.Provider
         value={{
