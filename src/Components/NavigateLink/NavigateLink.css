@@ -4,7 +4,16 @@
     justify-content: space-between;
     padding: 0;
     margin-top: 32px;
+    position: relative;
 
+}
+.list::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    background: #393C49;
+    height: 5px;
+    top: 100%;
 }
 
 .item {
@@ -55,15 +64,11 @@
 .activee::before {
     content: ' ';
     position: absolute;
-    top: 48px;
+    top: 42px;
     width: 55px;
     height: 5px;
     background: #EA7C69;
     opacity: 0.9;
     border-radius: 5px;
-}
-.NavigateLine{
-    width: 100%;
-    height: 3px;
-    background-color: #393C49;
+    z-index: 9999;
 }

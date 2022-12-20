@@ -1,5 +1,6 @@
 import React from 'react';
 import NavigateLink from "../../Components/NavigateLink/NavigateLink";
+import "./NavigateLinks.css"
 const NavigateLinks = () => {
     return (
       <>
@@ -11,7 +12,7 @@ const NavigateLinks = () => {
           <NavigateLink LinkItem="/appetizer" TitleItem="Appetizer" />
           <NavigateLink LinkItem="/desert" TitleItem="Desert" />
         </ul>
-        <div className="NavigateLine"></div>
+        
        
       </>
     );

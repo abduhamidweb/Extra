@@ -18,6 +18,8 @@ import Desert from "../Pages/Home/HomeNavigatePages/Desert";
 import Grill from "../Pages/Home/HomeNavigatePages/Grill";
 import HotDishes from "../Pages/Home/HomeNavigatePages/HotDishes";
 import Soup from "../Pages/Home/HomeNavigatePages/Soup";
+
+
 const index = () => {
   return (
     <>
@@ -31,6 +33,7 @@ const index = () => {
           <Route path="/desert" element={<Desert />} />
         </Route>
 
+       
         <Route path="/home" element={<Home />}></Route>
         <Route path="/percentage" element={<Percent />}></Route>
         <Route path="/database" element={<DataBase />}></Route>
