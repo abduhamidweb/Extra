@@ -1,6 +1,6 @@
 .Sidebar {
   width: 104px;
-  height: 100vh;
+  height: 100%;
   background: #1f1d2b;
   position: relative;
   transition: all 0.4s ease;
@@ -11,7 +11,7 @@
   list-style: none;
   margin: 0;
 
-  padding: 24px 0;
+  padding: 14px 0;
   position: relative;
 }
 .navigationItemLogo {
@@ -31,12 +31,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 13px;
+  padding: 11px;
   width: 95%;
   color: #ea7c69;
   margin-left: auto;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  // margin-top: 6px;
+  // margin-bottom: 12px;
 }
 .activeItem {
   background: #252836;
