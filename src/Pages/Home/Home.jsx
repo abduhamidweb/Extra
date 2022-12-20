@@ -75,7 +75,6 @@ const Home = () => {
   // }, []);
   return (
     <>
-        <main>
           <div className="row">
             <div className="col-8 WrapperLeftPage">
               <PageTitle
@@ -137,7 +136,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </main>
     </>
   );
 };
