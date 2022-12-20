@@ -1,0 +1,35 @@
+h2 {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  color: #ffffff;
+}
+p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #e0e6e9;
+}
+.PageInputWrapper {
+  padding: 0px 14px;
+  background: #2d303e;
+  /* Base / Dark Line */
+  display: flex;
+  align-items: center;
+  border: 1px solid #393c49;
+  border-radius: 8px;
+  width: 70%;
+  margin-left: auto;
+}
+.PageInputWrapper i {
+  margin-right: 3px;
+}
+input {
+  width: 90%;
+  border: 0px;
+  
+}
