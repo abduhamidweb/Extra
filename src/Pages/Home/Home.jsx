@@ -130,7 +130,7 @@ const Home = () => {
                 </nav>
               </div> */}
             </div>
-            <div className="col-4 p-4 ordersWrapp1">
+            <div className="col-4 py-4 pt-2 ordersWrapp1">
               <div className="ordersWrapp2">
                 <OrdersHome />
               </div>
