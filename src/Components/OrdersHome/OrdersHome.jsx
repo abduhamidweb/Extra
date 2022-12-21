@@ -1,5 +1,6 @@
 import React from "react";
-import orderFoodImg1 from "../../assets/images/orderFoofImg.png";
+
+import OrdersCard from "./OrdersCard";
 import "./styleOrders.css";
 const OrdersHome = () => {
   return (
@@ -8,7 +9,7 @@ const OrdersHome = () => {
         <h3 className="OrdersTitle">Orders</h3>
 
         <div className="tabLinkWrapp">
-        <ul class="nav nav-tabs mb-2" id="ex1" role="tablist">
+          <ul class="nav nav-tabs mb-2" id="ex1" role="tablist">
             <li class="nav-item" role="presentation">
               <a
                 class="nav-link active"
@@ -64,8 +65,6 @@ const OrdersHome = () => {
         <hr className="" />
 
         <div className="tabWrapp">
-          
-
           <div class="tab-content" id="ex1-content">
             <div
               class="tab-pane fade show active"
@@ -73,188 +72,7 @@ const OrdersHome = () => {
               role="tabpanel"
               aria-labelledby="ex1-tab-1"
             >
-                  <div className="orderCard my-4">
-         <div className="orderCardTopInfo d-flex align-items-center">
-         <div className="ordersInfo d-flex align-items-center">
-            <div className="orderImg">
-              <img src={orderFoodImg1} alt="" className="orderFoodImg" />
-            </div>
-            <div className="orderText ps-3">
-              <h4 className="orderTitle m-0">Spicy seasoned sea...</h4>
-              <p className="orderPriceText m-0">$ 2.29</p>
-            </div>
-          </div>
-          <div className="orderQtywrapp d-flex align-items-center">
-            <div className="qtySize">2</div>
-            <div className="priceSize">$ 4,58</div>
-          </div>
-         </div>
-
-         <div className="orderCardManagement d-flex align-items-center mt-2">
-           <div className="orderInputWrapp ">
-           <input type="text" placeholder="Order Note..." className="orderDescInput w-100"/>
-           </div>
-           <div className="orderBynWrapp">
-           <button className="btn deleteCardBtn"><i class="bi bi-trash3"></i></button>
-           </div>
-         </div>
-        </div>
-        <div className="orderCard my-4">
-         <div className="orderCardTopInfo d-flex align-items-center">
-         <div className="ordersInfo d-flex align-items-center">
-            <div className="orderImg">
-              <img src={orderFoodImg1} alt="" className="orderFoodImg" />
-            </div>
-            <div className="orderText ps-3">
-              <h4 className="orderTitle m-0">Spicy seasoned sea...</h4>
-              <p className="orderPriceText m-0">$ 2.29</p>
-            </div>
-          </div>
-          <div className="orderQtywrapp d-flex align-items-center">
-            <div className="qtySize">2</div>
-            <div className="priceSize">$ 4,58</div>
-          </div>
-         </div>
-
-         <div className="orderCardManagement d-flex align-items-center mt-2">
-           <div className="orderInputWrapp ">
-           <input type="text" placeholder="Order Note..." className="orderDescInput w-100"/>
-           </div>
-           <div className="orderBynWrapp">
-           <button className="btn deleteCardBtn"><i class="bi bi-trash3"></i></button>
-           </div>
-         </div>
-        </div>
-        <div className="orderCard my-2">
-         <div className="orderCardTopInfo d-flex align-items-center">
-         <div className="ordersInfo d-flex align-items-center">
-            <div className="orderImg">
-              <img src={orderFoodImg1} alt="" className="orderFoodImg" />
-            </div>
-            <div className="orderText ps-3">
-              <h4 className="orderTitle m-0">Spicy seasoned sea...</h4>
-              <p className="orderPriceText m-0">$ 2.29</p>
-            </div>
-          </div>
-          <div className="orderQtywrapp d-flex align-items-center">
-            <div className="qtySize">2</div>
-            <div className="priceSize">$ 4,58</div>
-          </div>
-         </div>
-
-         <div className="orderCardManagement d-flex align-items-center mt-2">
-           <div className="orderInputWrapp ">
-           <input type="text" placeholder="Order Note..." className="orderDescInput w-100"/>
-           </div>
-           <div className="orderBynWrapp">
-           <button className="btn deleteCardBtn"><i class="bi bi-trash3"></i></button>
-           </div>
-         </div>
-        </div>
-        <div className="orderCard my-4">
-         <div className="orderCardTopInfo d-flex align-items-center">
-         <div className="ordersInfo d-flex align-items-center">
-            <div className="orderImg">
-              <img src={orderFoodImg1} alt="" className="orderFoodImg" />
-            </div>
-            <div className="orderText ps-3">
-              <h4 className="orderTitle m-0">Spicy seasoned sea...</h4>
-              <p className="orderPriceText m-0">$ 2.29</p>
-            </div>
-          </div>
-          <div className="orderQtywrapp d-flex align-items-center">
-            <div className="qtySize">2</div>
-            <div className="priceSize">$ 4,58</div>
-          </div>
-         </div>
-
-         <div className="orderCardManagement d-flex align-items-center mt-2">
-           <div className="orderInputWrapp ">
-           <input type="text" placeholder="Order Note..." className="orderDescInput w-100"/>
-           </div>
-           <div className="orderBynWrapp">
-           <button className="btn deleteCardBtn"><i class="bi bi-trash3"></i></button>
-           </div>
-         </div>
-        </div>
-        <div className="orderCard my-4">
-         <div className="orderCardTopInfo d-flex align-items-center">
-         <div className="ordersInfo d-flex align-items-center">
-            <div className="orderImg">
-              <img src={orderFoodImg1} alt="" className="orderFoodImg" />
-            </div>
-            <div className="orderText ps-3">
-              <h4 className="orderTitle m-0">Spicy seasoned sea...</h4>
-              <p className="orderPriceText m-0">$ 2.29</p>
-            </div>
-          </div>
-          <div className="orderQtywrapp d-flex align-items-center">
-            <div className="qtySize">2</div>
-            <div className="priceSize">$ 4,58</div>
-          </div>
-         </div>
-
-         <div className="orderCardManagement d-flex align-items-center mt-2">
-           <div className="orderInputWrapp ">
-           <input type="text" placeholder="Order Note..." className="orderDescInput w-100"/>
-           </div>
-           <div className="orderBynWrapp">
-           <button className="btn deleteCardBtn"><i class="bi bi-trash3"></i></button>
-           </div>
-         </div>
-        </div>
-        <div className="orderCard my-4">
-         <div className="orderCardTopInfo d-flex align-items-center">
-         <div className="ordersInfo d-flex align-items-center">
-            <div className="orderImg">
-              <img src={orderFoodImg1} alt="" className="orderFoodImg" />
-            </div>
-            <div className="orderText ps-3">
-              <h4 className="orderTitle m-0">Spicy seasoned sea...</h4>
-              <p className="orderPriceText m-0">$ 2.29</p>
-            </div>
-          </div>
-          <div className="orderQtywrapp d-flex align-items-center">
-            <div className="qtySize">2</div>
-            <div className="priceSize">$ 4,58</div>
-          </div>
-         </div>
-
-         <div className="orderCardManagement d-flex align-items-center mt-2">
-           <div className="orderInputWrapp ">
-           <input type="text" placeholder="Order Note..." className="orderDescInput w-100"/>
-           </div>
-           <div className="orderBynWrapp">
-           <button className="btn deleteCardBtn"><i class="bi bi-trash3"></i></button>
-           </div>
-         </div>
-        </div>
-        <div className="orderCard my-4">
-         <div className="orderCardTopInfo d-flex align-items-center">
-         <div className="ordersInfo d-flex align-items-center">
-            <div className="orderImg">
-              <img src={orderFoodImg1} alt="" className="orderFoodImg" />
-            </div>
-            <div className="orderText ps-3">
-              <h4 className="orderTitle m-0">Spicy seasoned sea...</h4>
-              <p className="orderPriceText m-0">$ 2.29</p>
-            </div>
-          </div>
-          <div className="orderQtywrapp d-flex align-items-center">
-            <div className="qtySize">2</div>
-            <div className="priceSize">$ 4,58</div>
-          </div>
-         </div>
-
-         <div className="orderCardManagement d-flex align-items-center mt-2">
-           <div className="orderInputWrapp ">
-           <input type="text" placeholder="Order Note..." className="orderDescInput w-100"/>
-           </div>
-           <div className="orderBynWrapp">
-           <button className="btn deleteCardBtn"><i class="bi bi-trash3"></i></button>
-           </div>
-         </div>
-        </div>
+            {/* <OrdersCard/> */}
             </div>
             <div
               class="tab-pane fade"
