@@ -91,7 +91,7 @@ const HotDishes = () => {
             </select>
           </div>
         </div>
-        <div className="row">
+        <div className="row" >
           {loading ? (
             lastData.map((item, key) => {
               return <MainCard key={key} data={item} />;
