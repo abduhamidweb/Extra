@@ -1,9 +1,15 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import "../style.scss";
+import API from "../../../API/API";
 import MainCard from "../../../Components/MainCard/MainCard";
 import Loading from "../../../Components/Loading/Loading";
 import context from "../../../context/context";
+import App from "../../../App";
 const HotDishes = () => {
+  const [cardIdd, setCardIdd] = useState(null);
+  const [foodData, setFoodData] = useState(null);
+const localData=[]
+
   const {
     lastData,
     loading,
@@ -12,6 +18,37 @@ const HotDishes = () => {
     pageNumber,
     paginate,
   } = useContext(context);
+  function funcc() {
+    const mainCard = document.querySelector(".row");
+    //  console.log(mainCard);
+    mainCard.addEventListener("click", (e) => {
+      if (
+        e.target.classList.contains("card") ||
+        e.target.classList.contains("cardNameTitle") ||
+        e.target.classList.contains("price") ||
+        e.target.classList.contains("cardBowls") ||
+        e.target.classList.contains("MainCardImg")
+      ) {
+        setCardIdd(e.target.getAttribute("data-id"));
+        sendId(cardIdd);
+
+      }
+    });
+  }
+
+  const sendId = async (ID) => {
+    const res = await API.openById(ID);
+    // console.log(ID)
+   setFoodData(res.meals);
+  };
+  localData.push(foodData)
+  console.log(foodData)
+  console.log(cardIdd)
+  console.log(localData)
+
+  useEffect(() => {
+    funcc();
+  }, []);
   // const {
   //   lastData,
   //   pageNumber,
@@ -91,7 +128,7 @@ const HotDishes = () => {
             </select>
           </div>
         </div>
-        <div className="row" >
+        <div className="row">
           {loading ? (
             lastData.map((item, key) => {
               return <MainCard key={key} data={item} />;

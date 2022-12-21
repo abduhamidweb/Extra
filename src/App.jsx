@@ -64,6 +64,8 @@ const App = () => {
     // fetchByName("a")
   }, []);
 
+
+
   return (
 
     <>
@@ -84,7 +86,7 @@ const App = () => {
             <Sidebar />
           </section>
           <main>
-            <Router />
+            <Router/>
           </main>
         </div>
       </context.Provider>
