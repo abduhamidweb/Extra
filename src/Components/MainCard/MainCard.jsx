@@ -1,10 +1,8 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect,useState} from "react";
 import "./style.scss";
 const MainCard = ({ data: { strMeal, strMealThumb, idMeal } }) => {
+  const [cards,setCatds]=useState([])
   const card=useRef();
-// useEffect(()=>{
- 
-// },[])
 
   return (
 
