@@ -29,8 +29,9 @@ const localData=[]
         e.target.classList.contains("cardBowls") ||
         e.target.classList.contains("MainCardImg")
       ) {
-        setCardIdd(e.target.getAttribute("data-id"));
-        sendId(cardIdd);
+        // setCardIdd(e.target.getAttribute("data-id"));
+        // sendId(cardIdd);
+        sendId(e.target.getAttribute("data-id"))
 
       }
     });
@@ -39,11 +40,12 @@ const localData=[]
   const sendId = async (ID) => {
     const res = await API.openById(ID);
     // console.log(ID)
-   setFoodData(res.meals);
+    
+   setFoodData(res.meals[0]);
+
   };
   localData.push(foodData)
-  console.log(foodData)
-  console.log(cardIdd)
+  // console.log(foodData)
   console.log(localData)
 
   useEffect(() => {
