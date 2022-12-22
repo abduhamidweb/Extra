@@ -6,10 +6,8 @@ import Sidebar from "./Components/SideBar/Sidebar";
 import Router from "./router";
 import "./App.css";
 const App = () => {
-
-  function func(text){
-    console.log(text);
-  }
+  // const foodOrderSet = new Set([{ id: 1,name:"abd"},]);
+  // console.log(foodOrderSet)
   const [category, setCategory] = useState([]);
   const [categoryItem, setCategoryItem] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -64,6 +62,8 @@ const App = () => {
     // fetchByName("a")
   }, []);
 
+
+
   return (
 
     <>
@@ -84,7 +84,7 @@ const App = () => {
             <Sidebar />
           </section>
           <main>
-            <Router />
+            <Router/>
           </main>
         </div>
       </context.Provider>

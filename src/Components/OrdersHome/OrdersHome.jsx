@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import OrdersCard from "./OrdersCard";
 import "./styleOrders.css";
+
 const OrdersHome = () => {
+  let arr = JSON.parse(localStorage.getItem("data"));
   return (
     <>
       <div className="ordersHomeWrapp">
@@ -72,7 +74,11 @@ const OrdersHome = () => {
               role="tabpanel"
               aria-labelledby="ex1-tab-1"
             >
-            {/* <OrdersCard/> */}
+              {arr
+                ? arr.map((item) => {
+                    return <OrdersCard data={item} />;
+                  })
+                : ""}
             </div>
             <div
               class="tab-pane fade"

@@ -2,9 +2,8 @@ import React, {useState} from "react";
 import orderFoodImg1 from "../../assets/images/orderFoofImg.png";
 import "./styleOrders.css";
 import Input from "../Input/Input"
-const OrdersCard = () => {
+const OrdersCard = ({  }) => {
     const [orderSize, setOrderSize]=useState(1)
-    console.log(orderSize)
   return (
     <>
       <div className="orderCard my-2">
@@ -26,11 +25,6 @@ const OrdersCard = () => {
 
         <div className="orderCardManagement d-flex align-items-center mt-2">
           <div className="orderInputWrapp ">
-            {/* <input
-              type="text"
-              placeholder="Order Note..."
-              className="orderDescInput w-100"
-            /> */}
            <Input type={"text"} plece={"Order Note..."} inputClass={"orderDescInput w-100"}/>
           </div>
           <div className="orderBynWrapp">
