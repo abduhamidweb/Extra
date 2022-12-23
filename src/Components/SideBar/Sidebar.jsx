@@ -19,7 +19,12 @@ const Sidebar = () => {
             <SidebarItem link="/news" icon="mail" />
             <SidebarItem link="/notification" icon="bell" />
             <SidebarItem link="/settings" icon="cog" />
-            <li className={style.navigationItemLogout}>
+            <li 
+              className={style.navigationItemLogout}
+              onClick={() =>
+                localStorage.removeItem("userData")
+              }
+            >
               <img src={Logout} className={style.LogoMenu} />
             </li>
           </ul>

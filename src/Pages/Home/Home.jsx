@@ -84,7 +84,7 @@ const Home = () => {
                 icon="bi-search"
               />
               <NavigateLinks />
-              <HomenavigateLink />
+              {/* <HomenavigateLink /> */}
               {/* <div className="row WrapperCard">
                 <div className="col-6">
                   <h3>Choose Dishes</h3>
