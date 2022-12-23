@@ -1,6 +1,7 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect,useState} from "react";
 import "./style.scss";
 const MainCard = ({ data: { strMeal, strMealThumb, idMeal } }) => {
+  const [cards,setCatds]=useState([])
   const card=useRef();
 
 
@@ -8,7 +9,6 @@ const MainCard = ({ data: { strMeal, strMealThumb, idMeal } }) => {
 
     <>
       <div className="col-4 text-center cardWrapper" ref={card}>
-
         <div className="card" data-id={idMeal}>
           <img src={strMealThumb} alt="img" className="img-fluid MainCardImg" data-id={idMeal}/>
           <div className="card-body">

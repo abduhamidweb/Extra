@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useContext,
+  useCallback,
+} from "react";
 import "../style.scss";
 import API from "../../../API/API";
 import MainCard from "../../../Components/MainCard/MainCard";
@@ -6,10 +12,8 @@ import Loading from "../../../Components/Loading/Loading";
 import context from "../../../context/context";
 import App from "../../../App";
 const HotDishes = () => {
-  const [cardIdd, setCardIdd] = useState(null);
-  const [foodData, setFoodData] = useState(null);
-const localData=[]
-
+  const localdata = [];
+  
   const {
     lastData,
     loading,
@@ -28,87 +32,33 @@ const localData=[]
         e.target.classList.contains("price") ||
         e.target.classList.contains("cardBowls") ||
         e.target.classList.contains("MainCardImg")
-      ) {
+      ){
         // setCardIdd(e.target.getAttribute("data-id"));
-        // sendId(cardIdd);
-        sendId(e.target.getAttribute("data-id"))
-
+        DataCardId(e.target.getAttribute("data-id"));
+        // localStorage.setItem("data", JSON.stringify(foodData));
       }
     });
   }
-
-  const sendId = async (ID) => {
+  const DataCardId = async (ID) => {
     const res = await API.openById(ID);
-    // console.log(ID)
-    
-   setFoodData(res.meals[0]);
+    res.meals.forEach((item) => {
+      localdata.push(item);
+    });
 
+    const newData = localdata.filter((item, index) => {
+      return (
+        index ===
+        localdata.findIndex((obj) => {
+          return item.idMeal === obj.idMeal;
+        })
+      );
+    });
+    localStorage.setItem("data", JSON.stringify(newData));
   };
-  localData.push(foodData)
-  // console.log(foodData)
-  console.log(localData)
-
   useEffect(() => {
     funcc();
   }, []);
-  // const {
-  //   lastData,
-  //   pageNumber,
-  //   paginate,
-  //   fetchByName,
-  //   category,
-  //   loading,
-  //   categoryItem,
-  //   } = useContext(context);
-  // // All Category
-  // const fetchCategory = async () => {
-  //   const res = await API.getAllCategorys();
-  //   setCategory(res.categories);
-  //   setLoading(true);
-  // };
-  // // Category Items
-  // const fetchCategoryName = async (Name) => {
-  //   const res = await API.getFilterCategorys(Name);
-  //   setCategoryItem(res.meals);
-  //   setLoading(true);
-  // };
-  // // search
-  // const fetchByName = async (name) => {
-  //   const res = await API.searchByName(name);
-  //   if (!res.meals) {
-  //   } else {
-  //     setCategoryItem(res.meals);
-  //   }
-  // };
-  // // Pagination start
 
-  // const [currentPage, setCurrentPage] = useState(1);
-
-  // const [totalPage, setTotalPage] = useState(6);
-
-  // const firstPage = currentPage * totalPage;
-
-  // const lastPage = firstPage - totalPage;
-
-  // const lastData = categoryItem.slice(lastPage, firstPage);
-
-  // const paginate = (id) => {
-  //   setCurrentPage(id);
-  // };
-
-  // const pageNumber = [];
-  // for (let i = 1; i <= Math.ceil(categoryItem.length / totalPage); i++) {
-  //   pageNumber.push(i);
-  // }
-
-  // // Start fetch function
-  // useEffect(() => {
-  //   fetchCategory();
-  //   fetchCategoryName("Seafood");
-  //   // fetchByName("Arrabiata");
-
-  //   // fetchByName("a")
-  // }, []);
   return (
     <>
       <div className="row WrapperCard">
@@ -139,7 +89,6 @@ const localData=[]
             <Loading />
           )}
         </div>
-
         <nav aria-label="Page navigation example">
           <ul class="pagination">
             {pageNumber.map((pageEl) => {

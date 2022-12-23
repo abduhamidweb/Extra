@@ -25,18 +25,10 @@ const PageTitle = ({ input, title, date, icon }) => {
                   placeholder="Search for food, coffe, etc.."
                   // value={inputValue}
                   onChange={(e) => {
-                    fetchByName(e.target.value)
-                    
+                    fetchByName(e.target.value);
                   }}
                 />
               ) : (
-                // <Input
-                //   type={"text"}
-                //   inputClass={"PageTitlt"}
-                //   plece={"Search for food, coffe, etc.."}
-                //   val={inputValue}
-                //   setValue={setInputValue}
-                // />
                 ""
               )}
             </div>
