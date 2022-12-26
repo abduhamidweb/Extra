@@ -174,35 +174,39 @@ color: #FF7CA3;
 .navigateToPayPage:active {
   color: #ea7c69 !important;
 }
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+.navLinkk{
   font-family: "Barlow";
   font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 140%;
-  color: #ea7c69;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 140% !important;
+  color: #ea7c69 !important;
   border: 1px solid #393c49;
-  border-radius: 8px;
-  padding: 7px 12px;
+  border-radius: 8px !important;
+  padding: 7px 12px !important;
   margin-right: 10px;
   text-transform: capitalize;
+
 }
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover{
+.navLinkk:hover{
   text-decoration: none;
-  border: 1px solid #393c49;
+  
+  font-weight: 600 !important;
+  color: #ea7c69;
+  margin-right: 10px !important;
 }
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+.navLinkk.active{
   font-family: "Barlow";
   font-style: normal;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 140%;
-  color: #ffffff;
-  background: #ea7c69;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 7px 12px;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 140% !important;
+  color: #ffffff !important;
+  background-color: #ea7c69 !important;
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+  padding: 7px 12px !important;
   margin-right: 10px;
 }
 .tabWrapp{

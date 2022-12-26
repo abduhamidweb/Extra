@@ -17,6 +17,8 @@ const Input = ({ type, text, id, inputClass, plece, val, setValue }) => {
       />
     </>
   );
-};
+
+
+}
 
 export default Input;

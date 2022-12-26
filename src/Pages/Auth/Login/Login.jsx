@@ -1,8 +1,9 @@
 import React , {useState} from "react";
 import Input from "../../../Components/Input/Input";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SignUp from "../SignUp/SignUp";
 
 import "./Login.css";
 const Login = () => {
@@ -59,7 +60,9 @@ const Login = () => {
             </form>
             <span className="ForgotPassword">
               <p className="d-block">Forgot Password?</p>
-              <a href="#" className="d-block">Register</a>
+              <Link to={"SignUp"} className="d-block">
+                Register
+              </Link>
             </span>
           </div>
         </div>

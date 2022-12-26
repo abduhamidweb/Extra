@@ -1,0 +1,59 @@
+.MostOrderCard{
+    padding: 24px;
+    background: #1F1D2B;
+    border-radius: 8px;
+    width: 372px;
+    margin-top: 24px;
+
+
+    .btn-mostOrder{
+        width: 100%;
+        border: 1px solid #EA7C69;
+        padding: 10px !important;
+        margin-top: 24px;
+        font-size: 14px !important;
+        color: #EA7C69;
+    }
+}
+.mostTitleSelect{
+    justify-content: space-between;
+
+    &__mostTitle{
+        font-family: Barlow;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 7px;
+    }
+    &__MostSelect{
+        border: 1px solid #393C49;
+        width: 95px;
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px !important;
+        border-radius: 8px;
+        background: transparent;
+        color: white;
+
+        option{
+            //styleName: Body / Normal - Medium;
+            font-family: Barlow;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            background: #1F1D2B;
+            padding: 5px 0px !important;
+        }
+    }
+}
+.mostTitleSelect:focus{
+    outline: none !important;
+    border: none !important;
+}

@@ -21,11 +21,12 @@ import Soup from "../Pages/Home/HomeNavigatePages/Soup";
 
 
 const index = () => {
+ 
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route index element={<HotDishes />} />
+          <Route index element={<HotDishes/>} />
           <Route path="colddishes" element={<Colddishes />} />
           <Route path="soup" element={<Soup />} />
           <Route path="grill" element={<Grill />} />
