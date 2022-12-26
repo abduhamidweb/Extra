@@ -14,6 +14,7 @@ import App from "../../../App";
 const HotDishes = () => {
   const localdata = [];
   const [filterBookmark, setFilterBookmark] = useState([]);
+  
   const {
     lastData,
     loading,
@@ -32,7 +33,7 @@ const HotDishes = () => {
         e.target.classList.contains("price") ||
         e.target.classList.contains("cardBowls") ||
         e.target.classList.contains("MainCardImg")
-      ) {
+      ){
         // setCardIdd(e.target.getAttribute("data-id"));
         DataCardId(e.target.getAttribute("data-id"));
         // localStorage.setItem("data", JSON.stringify(foodData));
