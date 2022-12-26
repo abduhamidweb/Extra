@@ -1,0 +1,121 @@
+h2 {
+  margin: 24px;
+}
+.select_sidebar_Setting {
+  padding-left: 24px;
+  .nav-tabs {
+    border-radius: 8px;
+    background: #1f1d2b;
+    height: 90vh;
+  }
+  .nav-tabs .nav-link.active {
+    border: none !important;
+    border-radius: 0px !important;
+    background: rgba(234, 124, 105, 0.26);
+    position: relative;
+    &::after {
+      position: absolute;
+      width: 3px;
+      height: 39px;
+      content: "";
+      top: 50%;
+      right: 0%;
+      transform: translate(-50%, -50%);
+      display: block;
+      background: #ea7c69;
+      border-radius: 30px;
+    }
+    &:hover {
+      background: rgba(234, 124, 105, 0.26);
+    }
+          .iconWrapper {
+    margin-left: 25px;
+    color: #EA7C69;
+  }
+      .textWrapper {
+    padding-left: 10px;
+    h4 {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      margin-bottom: 0;
+      /* or 18px */
+      text-align: start;
+
+      /* White */
+
+      color: #EA7C69;
+    }
+    p {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 400;
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 140%;
+      /* identical to box height, or 17px */
+
+      /* Text/Light */
+
+      color: #abbbc2;
+    }
+  }
+  }
+  .nav-tabs .nav-item.show .nav-link,
+  .nav-tabs .nav-link {
+    border: none;
+    margin: 0 !important;
+    display: flex;
+    padding: 14px 0px !important;
+    margin: 0;
+    border: none !important;
+    border-radius: 0px !important;
+    position: relative;
+    &:hover {
+      background: transparent;
+    }
+      .iconWrapper {
+    margin-left: 25px;
+    color: #abbbc2;
+  }
+  .textWrapper {
+    padding-left: 10px;
+    h4 {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      margin-bottom: 0;
+      /* or 18px */
+      text-align: start;
+
+      /* White */
+
+      color: #ffffff;
+    }
+    p {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 400;
+      margin-bottom: 0;
+      font-size: 12px;
+      line-height: 140%;
+      /* identical to box height, or 17px */
+
+      /* Text/Light */
+
+      color: #abbbc2;
+    }
+  }
+  }
+
+}
+
+.select_sidebar_content{
+      border-radius: 8px;
+    background: #1f1d2b;
+    height: 90vh;
+}
