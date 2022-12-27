@@ -8,6 +8,7 @@ import "./App.css";
 const App = () => {
   // const foodOrderSet = new Set([{ id: 1,name:"abd"},]);
   // console.log(foodOrderSet)
+
   const [category, setCategory] = useState([]);
   const [categoryItem, setCategoryItem] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -77,6 +78,7 @@ const App = () => {
           category,
           loading,
           categoryItem,
+     
         }}
       >
         <div className="ALL_SECTION_WRAPPER">

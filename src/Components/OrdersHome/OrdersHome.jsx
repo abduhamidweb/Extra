@@ -1,12 +1,35 @@
 import React, { useState, useEffect } from "react";
-
+import { useContext } from "react";
 import OrdersCard from "./OrdersCard";
+import context from "../../context/context";
 import "./styleOrders.css";
 
 const OrdersHome = () => {
+
   let arr = JSON.parse(localStorage.getItem("data"));
+  const [totalSize,setTotelSize]=useState(0)
+  const locatItemId = [];
 
+  function allId() {
+    if (arr) {
+      arr.map((item) => {
+        locatItemId.push(item.idMeal.substring(1, 3));
+        // console.log(locatItemId);
+      });
+      
+     let a = locatItemId.reduce((a, b) => {
+        return a*1 + b*1 ;
+      }, 0)
+setTotelSize(a)
+      
+    }
 
+  }
+  
+
+  useEffect(() => {
+    allId();
+  }, []);
 
   return (
     <>
@@ -117,8 +140,13 @@ const OrdersHome = () => {
               <h4 className="totaltTitle">Sub Total</h4>
             </span>
             <span className="totalPriceWrapp d-flex align-items-center">
-              <h4 className="totalPriceTitle m-0">$</h4>
-              <h4 className="totalPriceTitle m-0 ps-1">21,03</h4>
+              <h4 className="totalPriceTitle m-0"></h4>
+
+              <h4 className="totalPriceTitle m-0 ps-1">$ {""}
+             {
+              totalSize
+             }
+              </h4>
             </span>
           </div>
           <button className="btn btn navigateToPayPage d-block w-100 mt-3">

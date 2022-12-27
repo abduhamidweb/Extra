@@ -13,7 +13,7 @@ import context from "../../../context/context";
 import App from "../../../App";
 const HotDishes = () => {
   const localdata = [];
-  
+  const [date2, setDate2]=useState([])
   const {
     lastData,
     loading,
@@ -53,11 +53,16 @@ const HotDishes = () => {
         })
       );
     });
+0
+ 
+ 
     localStorage.setItem("data", JSON.stringify(newData));
   };
+
+
   useEffect(() => {
     funcc();
-  }, []);
+  }, [API.openById()]);
 
   return (
     <>
