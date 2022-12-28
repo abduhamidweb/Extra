@@ -35,6 +35,7 @@ const MostTypeCircle = () => {
       uv: 80,
       pv: 4800,
       fill: "rgba(101, 176, 246, 1)",
+      
     },
 
   ];
@@ -52,8 +53,8 @@ const MostTypeCircle = () => {
 <RadialBarChart
         width={320}
         height={250}
-        innerRadius="60%"
-        outerRadius="140%"
+        innerRadius="30%"
+        outerRadius="80%"
         data={data}
         startAngle={180}
         endAngle={-180}

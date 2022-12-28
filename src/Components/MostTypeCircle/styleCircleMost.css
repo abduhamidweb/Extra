@@ -1,9 +1,9 @@
 .mostCircle .recharts-wrapper svg{
-    height: 450px !important;
+    height: 320px !important;
 }
 .recharts-wrapper{
     width: 100% !important;
-    height: 450px !important;
+    height: 320px !important;
 }
 .recharts-legend-wrapper{
     display: none;

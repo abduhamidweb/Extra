@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import Users from "../../Components/Users/Users";
+import MostTypeCircle from "../../Components/MostTypeCircle/MostTypeCircle"
 
 const DataBase = () => {
   const [valueMeal,setValueMeal]=useState("today")
@@ -70,7 +71,7 @@ const orderData=[]
   const navigate = useNavigate()
   return (
     <>
-      <div className="row">
+      <div className="row m-0 p-0">
         <div className="col-8 pt-3">
           <PageTitle title={"Dashboard"} date={"Tuesday 2 Feb, 2021"} />
           <div className="row">
@@ -110,8 +111,8 @@ const orderData=[]
           </div>
           <Users />
         </div>
-        <div className="col-4 MostOrderCard">
-          <div className="OrderMailWrap">
+        <div className="col-4 ">
+          <div className="OrderMailWrap MostOrderCard">
             <div className="mostTitleSelect d-flex">
               <h2 className="mostTitleSelect__mostTitle">Most Ordered</h2>
               <span className="MostSpan">
@@ -139,6 +140,22 @@ const orderData=[]
             >
               View All
             </button>
+          </div>
+
+          <div className="mostTypeCircleWrapp">
+            <div className="topMostTypeWrapp d-flex mb-2 justify-content-between align-item-center">
+              <h2 className="topMostTypeTitle m-0">
+              Most Type of Order
+              </h2>
+           <span className="mostCircleSelectWrapp">
+            <select id="circleSelect" className="circleSelect">
+              <option value="Tooday">Tooday</option>
+              <option value="Lastday">Lastday</option>
+            </select>
+           </span>
+            </div>
+            <hr className="m-0"/>
+{/* <MostTypeCircle/> */}
           </div>
         </div>
       </div>

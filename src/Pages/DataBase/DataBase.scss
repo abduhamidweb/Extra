@@ -1,8 +1,8 @@
 .MostOrderCard{
-    padding: 24px;
+    padding: 24px 24px 24px 24px;
     background: #1F1D2B;
     border-radius: 8px;
-    width: 372px;
+    
     margin-top: 24px;
 
 
@@ -67,3 +67,53 @@
     padding: 10px;
     border-radius: 8px;
 }
+
+.mostTypeCircleWrapp{
+    padding: 24px 24px 24px 24px;
+    background: #1F1D2B;
+    border-radius: 8px;
+    
+    margin-top: 24px;
+.topMostTypeTitle{
+    font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 140%;
+color: #fff;
+}
+.mostCircleSelectWrapp{
+    display: flex;
+    align-items: center;
+}
+.circleSelect{
+    background: transparent;
+    color: #fff;
+    border: none !important;
+    outline: none;
+    font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 130%;
+    option{
+        font-family: Barlow;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        background: #1F1D2B;
+        padding: 5px 0px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+}
+
