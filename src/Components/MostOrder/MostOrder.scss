@@ -8,25 +8,23 @@
 }
 
 .MostCards {
-    margin-top: 22px;
     overflow-y: scroll;
     height: 400px;
 }
 
 .MostOrderInfo {
     gap: 12px;
-    margin-top: 22px;
+    align-items: center;
 
     &__img {
         img {
             border-radius: 50%;
-            width: 51px;
-            height: 51px;
+            width: 45px !important;
+            height: 45px !important;
         }
     }
 
     &__texts {
-        margin-top: 5px;
 
         h4 {
             font-family: Barlow;

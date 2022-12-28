@@ -70,7 +70,7 @@ const orderData=[]
   const navigate = useNavigate()
   return (
     <>
-      <div className="row">
+      <div className="row m-0 p-0">
         <div className="col-8 pt-3">
           <PageTitle title={"Dashboard"} date={"Tuesday 2 Feb, 2021"} />
           <div className="row">
