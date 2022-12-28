@@ -37,10 +37,10 @@ setTotelSize(a)
         <h3 className="OrdersTitle">Orders</h3>
 
         <div className="tabLinkWrapp">
-          <ul class="nav nav-tabs mb-2" id="ex1" role="tablist">
-            <li class="nav-item" role="presentation">
+          <ul className="nav nav-tabs mb-2" id="ex1" role="tablist">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link navLinkk active"
+                className="nav-link navLinkk active"
                 id="ex1-tab-1"
                 data-mdb-toggle="tab"
                 href="#ex1-tabs-1"
@@ -51,9 +51,9 @@ setTotelSize(a)
                 Dine In
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link navLinkk"
+                className="nav-link navLinkk"
                 id="ex1-tab-2"
                 data-mdb-toggle="tab"
                 href="#ex1-tabs-2"
@@ -64,9 +64,9 @@ setTotelSize(a)
                 To Go
               </a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li className="nav-item" role="presentation">
               <a
-                class="nav-link navLinkk"
+                className="nav-link navLinkk"
                 id="ex1-tab-3"
                 data-mdb-toggle="tab"
                 href="#ex1-tabs-3"
@@ -93,9 +93,9 @@ setTotelSize(a)
         <hr className="" />
 
         <div className="tabWrapp">
-          <div class="tab-content" id="ex1-content">
+          <div className="tab-content" id="ex1-content">
             <div
-              class="tab-pane fade show active"
+              className="tab-pane fade show active"
               id="ex1-tabs-1"
               role="tabpanel"
               aria-labelledby="ex1-tab-1"
@@ -107,7 +107,7 @@ setTotelSize(a)
                 : ""}
             </div>
             <div
-              class="tab-pane fade"
+              className="tab-pane fade"
               id="ex1-tabs-2"
               role="tabpanel"
               aria-labelledby="ex1-tab-2"
@@ -115,7 +115,7 @@ setTotelSize(a)
               To Go
             </div>
             <div
-              class="tab-pane fade"
+              className="tab-pane fade"
               id="ex1-tabs-3"
               role="tabpanel"
               aria-labelledby="ex1-tab-3"

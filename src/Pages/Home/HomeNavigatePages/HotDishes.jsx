@@ -14,6 +14,7 @@ import App from "../../../App";
 const HotDishes = () => {
   const localdata = [];
   const [date2, setDate2]=useState([])
+  const [filterBookmark, setFilterBookmark] = useState([]);
   const {
     lastData,
     loading,
@@ -95,7 +96,7 @@ const HotDishes = () => {
           )}
         </div>
         <nav aria-label="Page navigation example">
-          <ul class="pagination">
+          <ul className="pagination">
             {pageNumber.map((pageEl) => {
               return (
                 <li

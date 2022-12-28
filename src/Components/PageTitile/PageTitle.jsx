@@ -16,22 +16,20 @@ const PageTitle = ({ input, title, date, icon }) => {
             <p>{date ? date : ""}</p>
           </div>
           <div className="col-6 text-end">
-            <div className="PageInputWrapper">
-              {icon ? <i class={`bi ${icon}`}></i> : ""}
-              {input ? (
-                <input
-                  type={"text"}
-                  className="PageTitlt"
-                  placeholder="Search for food, coffe, etc.."
-                  // value={inputValue}
-                  onChange={(e) => {
-                    fetchByName(e.target.value);
-                  }}
-                />
-              ) : (
-                ""
-              )}
-            </div>
+            { icon ? 
+              <div className="PageInputWrapper">
+                <i className={`bi ${icon}`}></i> 
+                  <input
+                    type={"text"}
+                    className="PageTitlt"
+                    placeholder="Search for food, coffe, etc.."
+                    // value={inputValue}
+                    onChange={(e) => {
+                      fetchByName(e.target.value);
+                    }}
+                  />
+              </div> : ""
+            }
           </div>
         </div>
       </section>

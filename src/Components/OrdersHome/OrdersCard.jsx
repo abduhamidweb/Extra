@@ -31,7 +31,7 @@ const OrdersCard = ({
               type={"number"}
               minNumb={1}
               maxNumb={10}
-              inputClass={"qtySize"}
+              inputclassName={"qtySize"}
               val={orderSize}
               setValue={setOrderSize}
             />
@@ -46,12 +46,12 @@ const OrdersCard = ({
             <Input
               type={"text"}
               plece={"Order Note..."}
-              inputClass={"orderDescInput w-100"}
+              inputclassName={"orderDescInput w-100"}
             />
           </div>
           <div className="orderBynWrapp">
             <button className="btn deleteCardBtn">
-              <i class="bi bi-trash3"></i>
+              <i className="bi bi-trash3"></i>
             </button>
           </div>
         </div>

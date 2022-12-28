@@ -63,10 +63,7 @@ const App = () => {
     // fetchByName("a")
   }, []);
 
-
-
   return (
-
     <>
       <context.Provider
         value={{
@@ -78,7 +75,6 @@ const App = () => {
           category,
           loading,
           categoryItem,
-     
         }}
       >
         <div className="ALL_SECTION_WRAPPER">
@@ -86,7 +82,7 @@ const App = () => {
             <Sidebar />
           </section>
           <main>
-            <Router/>
+            <Router />
           </main>
         </div>
       </context.Provider>
