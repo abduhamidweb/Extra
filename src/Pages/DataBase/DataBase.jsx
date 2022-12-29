@@ -14,47 +14,51 @@ const orderData=[]
     let OrderCard = [
       {
         MostTitle: "Spicy seasoned seafood noodles",
-        MostImg: "https://picsum.photos/61/61",
-        MostDescription: "MostDescription",
+        MostImg:
+          "https://www.themealdb.com/images/media/meals/vptqpw1511798500.jpg",
+        MostDescription: "200 dishes ordered",
         id: 1,
         Category: "today",
       },
       {
-        MostTitle: "Spicy seasoned seafood noodles",
-        MostImg: "https://picsum.photos/61/61",
-        MostDescription: "MostDescription",
+        MostTitle: "Salted pasta with mushroom sauce",
+        MostImg:
+          "https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg",
+        MostDescription: "120 dishes ordered",
         id: 2,
         Category: "today",
       },
       {
-        MostTitle: "Spicy seasoned seafood noodles",
-        MostImg: "https://picsum.photos/61/61",
-        MostDescription: "MostDescription",
+        MostTitle: "Beef dumpling in hot and sour soup",
+        MostImg:
+          "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg",
+        MostDescription: "80 dishes ordered",
         id: 3,
         Category: "today",
       },
       {
-        MostTitle: "Spicy seasoned seafood noodles",
-        MostImg: "https://picsum.photos/id/45/61/61",
-        MostDescription: "MostDescription",
+        MostTitle: "Salted pasta with mushroom sauce",
+        MostImg: "https://www.themealdb.com/images/media/meals/1548772327.jpg",
+        MostDescription: "80 dishes ordered",
         id: 4,
         Category: "lastday",
       },
       {
-        MostTitle: "Spicy seasoned seafood noodles",
-        MostImg: "https://picsum.photos/id/45/61/61",
-        MostDescription: "MostDescription",
+        MostTitle: "Beef dumpling in hot and sour soup",
+        MostImg: "https://www.themealdb.com/images/media/meals/1520084413.jpg",
+        MostDescription: "120 dishes ordered",
         id: 5,
         Category: "lastday",
       },
       {
         MostTitle: "Spicy seasoned seafood noodles",
-        MostImg: "https://picsum.photos/id/45/61/61",
-        MostDescription: "MostDescription",
+        MostImg:
+          "https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg",
+        MostDescription: "30 dishes ordered",
         id: 6,
         Category: "lastday",
       },
-  ];
+    ];
 
   OrderCard.map(i => {
     if (i.Category == valueMeal) {
@@ -66,7 +70,7 @@ const orderData=[]
   const navigate = useNavigate()
   return (
     <>
-      <div className="row">
+      <div className="row m-0 p-0">
         <div className="col-8 pt-3">
           <PageTitle title={"Dashboard"} date={"Tuesday 2 Feb, 2021"} />
           <div className="row">
@@ -107,31 +111,35 @@ const orderData=[]
           <Users />
         </div>
         <div className="col-4 MostOrderCard">
-          <div className="mostTitleSelect d-flex">
-            <h2 className="mostTitleSelect__mostTitle">Most Ordered</h2>
-            <select
-              className="mostTitleSelect__MostSelect"
-              id="MostSelectId"
-              onChange={(e) => {
-                setValueMeal(e.target.value);
+          <div className="OrderMailWrap">
+            <div className="mostTitleSelect d-flex">
+              <h2 className="mostTitleSelect__mostTitle">Most Ordered</h2>
+              <span className="MostSpan">
+                <select
+                  className="mostTitleSelect__MostSelect"
+                  id="MostSelectId"
+                  onChange={(e) => {
+                    setValueMeal(e.target.value);
+                  }}
+                >
+                  <option>today</option>
+                  <option>lastday</option>
+                </select>
+              </span>
+            </div>
+            <hr className="my-1"/>
+            {orderData.map((el) => {
+              return <MostOrder data={el} />;
+            })}
+            <button
+              className="btn btn-mostOrder"
+              onClick={() => {
+                navigate("/home");
               }}
             >
-              <option>today</option>
-              <option>lastday</option>
-            </select>
+              View All
+            </button>
           </div>
-          <hr />
-          {orderData.map((el) => {
-            return <MostOrder data={el} />;
-          })}
-          <button
-            className="btn btn-mostOrder"
-            onClick={() => {
-              navigate("/home");
-            }}
-          >
-            View All
-          </button>
         </div>
       </div>
     </>

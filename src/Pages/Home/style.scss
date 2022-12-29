@@ -191,3 +191,53 @@ padding-right: 30px;
 .WrapperCard{
   padding: 20px 0;
 }
+.Pay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #1F1D2B;
+  width: 465px;
+  height: 100vh;
+  padding: 64px 24px;
+  z-index: 111;
+  border-radius: 12px;
+
+
+  &__Span{
+
+
+    &__title{
+      //styleName: Heading/H1;
+      font-family: Barlow;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 39px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin: 0;
+    }
+    &__deck{
+      //styleName: Body/Large - Medium;
+      font-family: Barlow;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #ABBBC2;
+      padding-top: -8px;
+    }
+  }
+
+  &__title{
+    //styleName: Heading/H2;
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    margin-top: 24px;
+  }
+}
