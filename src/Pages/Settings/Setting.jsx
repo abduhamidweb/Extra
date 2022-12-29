@@ -1,11 +1,117 @@
-import React from "react";
+import React, { useContext, useRef, useState } from "react";
 import SettingList from "../../Components/SettingList/SettingList";
 import { Outlet } from "react-router-dom";
 import "./style.scss";
 import PageTitit from "../../Components/PageTitile/PageTitle";
+import AddCard from "../../Components/AddCard/AddCard";
+import context from "../../context/context";
+import Loading from "../../Components/Loading/Loading";
+import FormAddcard from "../../Components/FormAddCard/FormAddcard";
+import Input from "../../Components/Input/Input";
+import API from "../../API/API";
 const Setting = () => {
+  const [mealName, setMealName] = useState("");
+  const [price, setPrice] = useState("");
+  const [blows, setBlows] = useState("");
+  const [imgUrl, setImgUrl] = useState("");
+  const [category, setCategor] = useState("");
+  const formRef = useRef();
+  const datas = useRef();
+  const Modal = useRef();
+  const ModalWrap = useRef();
+  const { addUser, loading } = useContext(context);
+
+  function hendlerfunctions(e) {
+    try {
+      fetch(`http://localhost:8080/addUser`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: mealName,
+          price: price,
+          bowis: blows,
+          category: category,
+          img: imgUrl,
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <>
+      {/* Modal window  start*/}
+      <div className="modalBeckBg" ref={ModalWrap}>
+        <div className="container modalWindow" ref={Modal}>
+          <div className="row formBlock text-center" ref={formRef}>
+            <div className="col-12 text-center">
+              <h4 className="text-end text-light p-2">
+                <i
+                  class="bi bi-x-lg"
+                  onClick={() => {
+                    Modal.current.style.display = "none";
+                    ModalWrap.current.style.display = "none";
+                  }}
+                ></i>
+              </h4>
+              <form
+                onSubmit={() => {
+                  hendlerfunctions();
+                }}
+              >
+                <Input
+                  type={"text"}
+                  plece="Enter the name of the dish"
+                  id={"isMealName"}
+                  inputClass="mealName w-100"
+                  val={mealName}
+                  setValue={setMealName}
+                />
+                <div className="d-flex w-100 mt-2">
+                  <Input
+                    type={"text"}
+                    plece="Enter the Price of the dish"
+                    id={"isMealPrice"}
+                    inputClass="mealPrice mr-1"
+                    val={price}
+                    setValue={setPrice}
+                  />
+                  <Input
+                    type={"text"}
+                    plece="Enter the blows of the dish"
+                    id={"isMealBlows"}
+                    inputClass="mealBlows ms-1"
+                    val={blows}
+                    setValue={setBlows}
+                  />
+                </div>
+                <Input
+                  type={"text"}
+                  plece="Enter the Category of the dish"
+                  id={"isMealBlows"}
+                  inputClass="mealBlows w-100 mt-2"
+                  val={category}
+                  setValue={setCategor}
+                />
+                <Input
+                  type={"text"}
+                  plece="Enter the img URL"
+                  id={"isMealImg"}
+                  inputClass="mealImg w-100 mt-2"
+                  val={imgUrl}
+                  setValue={setImgUrl}
+                />
+                <button className="btn w-100 mt-3 " type="submit">
+                  add meal card
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Modal window end */}
       <PageTitit title={"Setting"} />
       <div className="select_sidebar_Setting">
         <div class="row">
@@ -45,11 +151,11 @@ const Setting = () => {
                 aria-selected="false"
               >
                 <div className="iconWrapper">
-                  <i className={"bi bi-heart"}></i>
+                  <i class="bi bi-bank"></i>
                 </div>
                 <div className="textWrapper">
-                  <h4>{"title"}</h4>
-                  <p>{"desc"}</p>
+                  <h4>{"Your Restaurant"}</h4>
+                  <p>{"Dark and Light mode, Font size"}</p>
                 </div>
               </div>
               <div
@@ -63,11 +169,11 @@ const Setting = () => {
                 aria-selected="false"
               >
                 <div className="iconWrapper">
-                  <i className={"bi bi-heart"}></i>
+                  <i class="bi bi-cart4"></i>
                 </div>
                 <div className="textWrapper">
-                  <h4>{"title"}</h4>
-                  <p>{"desc"}</p>
+                  <h4>{"Products Management"}</h4>
+                  <p>{"Manage your product, pricing, etc"}</p>
                 </div>
               </div>
 
@@ -83,10 +189,10 @@ const Setting = () => {
                 aria-selected="false"
               >
                 <div className="iconWrapper">
-                  <i className={"bi bi-heart"}></i>
+                  <i class="bi bi-bell-fill"></i>
                 </div>
                 <div className="textWrapper">
-                  <h4>{"Appereance"}</h4>
+                  <h4>{"Notifications"}</h4>
                   <p>{"Dark and Light mode, Font size"}</p>
                 </div>
               </div>
@@ -101,11 +207,11 @@ const Setting = () => {
                 aria-selected="false"
               >
                 <div className="iconWrapper">
-                  <i className={"bi bi-heart"}></i>
+                  <i class="bi bi-file-lock2"></i>
                 </div>
                 <div className="textWrapper">
-                  <h4>{"title"}</h4>
-                  <p>{"desc"}</p>
+                  <h4>{"Security"}</h4>
+                  <p>{"Customize your notifications"}</p>
                 </div>
               </div>
               <div
@@ -119,11 +225,11 @@ const Setting = () => {
                 aria-selected="false"
               >
                 <div className="iconWrapper">
-                  <i className={"bi bi-heart"}></i>
+                  <i class="bi bi-file-earmark-person"></i>
                 </div>
                 <div className="textWrapper">
-                  <h4>{"title"}</h4>
-                  <p>{"desc"}</p>
+                  <h4>{"About Us"}</h4>
+                  <p>{"Find out more about Posly"}</p>
                 </div>
               </div>
               {/* sss */}
@@ -154,8 +260,186 @@ const Setting = () => {
                 role="tabpanel"
                 aria-labelledby="v-tabs-messages-tab"
               >
-                Messages conten22t
+                <div className="contentTitle">
+                  <h2>Products Management</h2>
+                  <button className="btn">
+                    <i class="bi bi-filter-right"></i>{" "}
+                    <span>Manage Categories</span>
+                  </button>
+                </div>
+                <div className="ManegWraper">
+                  <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="ex1-tab-1"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-1r"
+                        role="tab"
+                        aria-controls="ex1-tabs-1r"
+                        aria-selected="true"
+                      >
+                        Hot Dishes
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="ex1-tab-2t"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-2t"
+                        role="tab"
+                        aria-controls="ex1-tabs-2t"
+                        aria-selected="false"
+                      >
+                        Cold Dishes
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="ex1-tab-3t"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-3t"
+                        role="tab"
+                        aria-controls="ex1-tabs-3t"
+                        aria-selected="false"
+                      >
+                        Soup
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="ex1-tab-4t"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-4t"
+                        role="tab"
+                        aria-controls="ex1-tabs-4t"
+                        aria-selected="false"
+                      >
+                        Grill
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="ex1-tab-5t"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-5t"
+                        role="tab"
+                        aria-controls="ex1-tabs-5t"
+                        aria-selected="false"
+                      >
+                        Appetizer
+                      </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="ex1-tab-66t"
+                        data-mdb-toggle="tab"
+                        href="#ex1-tabs-66t"
+                        role="tab"
+                        aria-controls="ex1-tabs-66t"
+                        aria-selected="false"
+                      >
+                        Dessert
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content" id="ex1-content">
+                  <div
+                    class="tab-pane fade show active"
+                    id="ex1-tabs-1r"
+                    role="tabpanel"
+                    aria-labelledby="ex1-tab-1r"
+                  >
+                    <div className="container">
+                      <div className="row cardAddWrapper" ref={datas}>
+                        <div className="col-4 ">
+                          <div
+                            className="card card-add cursor"
+                            onClick={() => {
+                              ModalWrap.current.style.display = "block";
+                              Modal.current.style.display = "block";
+                            }}
+                          >
+                            <div className="add-dishes">
+                              <i class="bi bi-plus"></i>
+                              <h6>Add new dish</h6>
+                            </div>
+                          </div>
+                        </div>
+                        {loading ? (
+                          addUser.map((item, element, index) => {
+                            return <AddCard data={item} />;
+                          })
+                        ) : (
+                          <Loading />
+                        )}
+                      </div>
+                      <div className="cardObServer">
+                        <div className="container">
+                          <div className="row pt-3 pb-3">
+                            <div className="col-8 d-flex">
+                              <button className="btn discard">
+                                Discard Changes
+                              </button>
+                              <button className="btn ms-2 save">
+                                Save Changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="ex1-tabs-2t"
+                    role="tabpanel"
+                    aria-labelledby="ex1-tab-2t"
+                  >
+                    Tab 2 content
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="ex1-tabs-3t"
+                    role="tabpanel"
+                    aria-labelledby="ex1-tab-3t"
+                  >
+                    Tab 3 content
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="ex1-tabs-4t"
+                    role="tabpanel"
+                    aria-labelledby="ex1-tab-4t"
+                  >
+                    Tab 4 content
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="ex1-tabs-5t"
+                    role="tabpanel"
+                    aria-labelledby="ex1-tab-5t"
+                  >
+                    Tab 5 content
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="ex1-tabs-66t"
+                    role="tabpanel"
+                    aria-labelledby="ex1-tab-6t"
+                  >
+                    Tab 6 content
+                  </div>
+                </div>
               </div>
+              {/* Product maneger start */}
+
               {/* twoo */}
               <div
                 class="tab-pane fade "

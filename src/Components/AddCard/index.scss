@@ -1,0 +1,65 @@
+.col-4{
+    margin-top: 20px;
+    .card-add {
+  background: #1f1d2b;
+  /* Base / Dark Line */
+
+  border: 1px dashed #393c49;
+  border-radius: 8px;
+  text-align: center;
+  img {
+    margin: 20px auto 14px auto;
+    border-radius: 50%;
+    width: 144px;
+    height: 144px;
+  }
+  .card-body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    p {
+      width: 144px;
+      margin: auto;
+    }
+    .card-price {
+      /* Body / Normal - Regular */
+
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      /* identical to box height, or 20px */
+
+      text-align: center;
+
+      /* Text/Light */
+
+      color: #abbbc2;
+    }
+  }
+  .edit-dish {
+    background: #ea7c6975;
+    border-radius: 0px 0px 8px 8px !important;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin-top: 16px;
+    .btn-txt {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      /* identical to box height, or 20px */
+
+      /* Primary Color */
+
+      color: #f8836e;
+    }
+    &:active {
+      background: white;
+    }
+  }
+}
+}

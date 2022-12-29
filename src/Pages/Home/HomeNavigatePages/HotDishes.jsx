@@ -24,7 +24,6 @@ const HotDishes = () => {
   } = useContext(context);
   function funcc() {
     const mainCard = document.querySelector(".row");
-    //  console.log(mainCard);
     mainCard.addEventListener("click", (e) => {
       if (
         e.target.classList.contains("card") ||
