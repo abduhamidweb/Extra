@@ -5,6 +5,7 @@ import context from "./context/context";
 import Sidebar from "./Components/SideBar/Sidebar";
 import Router from "./router";
 import "./App.css";
+import FormAddcard from "./Components/FormAddCard/FormAddcard";
 const App = () => {
   // const foodOrderSet = new Set([{ id: 1,name:"abd"},]);
   // console.log(foodOrderSet)
@@ -12,6 +13,7 @@ const App = () => {
   const [categoryItem, setCategoryItem] = useState([]);
   const [loading, setLoading] = useState(false);
   const [test, setTest] = useState("Test");
+  const [addUser, setAddUser] = useState([]);
   // All Category
   const fetchCategory = async () => {
     const res = await API.getAllCategorys();
@@ -32,6 +34,13 @@ const App = () => {
       setCategoryItem(res.meals);
     }
   };
+  // Add user All
+  const fetchAddUser = async (addUserName) => {
+    const res = await API.addUser(addUserName);
+    setAddUser(res);
+    setLoading(true);
+  };
+
   // Pagination start
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -57,15 +66,9 @@ const App = () => {
   useEffect(() => {
     fetchCategory();
     fetchCategoryName("Seafood");
-    // fetchByName("Arrabiata");
-
-    // fetchByName("a")
+    fetchAddUser("addUser");
   }, []);
-
-
-
   return (
-
     <>
       <context.Provider
         value={{
@@ -77,6 +80,7 @@ const App = () => {
           category,
           loading,
           categoryItem,
+          addUser,
         }}
       >
         <div className="ALL_SECTION_WRAPPER">
@@ -84,7 +88,7 @@ const App = () => {
             <Sidebar />
           </section>
           <main>
-            <Router/>
+            <Router />
           </main>
         </div>
       </context.Provider>

@@ -1,0 +1,100 @@
+{
+  "addUser": [
+    {
+      "id": 1,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "2.29",
+      "bowis": "20 Bowls",
+      "category": "beef",
+      "img": "https://www.themealdb.com/images/media/meals/vptqpw1511798500.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "5.3",
+      "bowis": "20 Bowls",
+      "category": "checken",
+      "img": "https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "7.3",
+      "bowis": "20 Bowls",
+      "category": "dessert",
+      "img": "https://www.themealdb.com/images/media/meals/vptqpw1511798500.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "1.5",
+      "bowis": "20 Bowls",
+      "category": "lamb",
+      "img": "https://www.themealdb.com/images/media/meals/1548772327.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "5.6",
+      "bowis": "20 Bowls",
+      "category": "",
+      "img": "https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "2.9",
+      "bowis": "20 Bowls",
+      "category": "beef",
+      "img": "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "3.39",
+      "bowis": "20 Bowls",
+      "category": "beef",
+      "img": "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "9.9",
+      "bowis": "20 Bowls",
+      "category": "beef",
+      "img": "https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "9",
+      "bowis": "20 Bowls",
+      "category": "beef",
+      "img": "https://www.themealdb.com/images/media/meals/1520084413.jpg"
+    },
+    {
+      "title": "aaaaaaaaaaaaaaaaaa",
+      "price": "aaaaaaaaaaaaaaaaaa",
+      "bowis": "aaaaaaaaaaaaaa",
+      "category": "aaaaaaaaaaa",
+      "img": "aaaaaaaaaaaa",
+      "id": 10
+    },
+    {
+      "title": "Tovuq sirli ",
+      "price": "6 000",
+      "bowis": "tovuq",
+      "category": "Muhabat opa somsalari",
+      "img": "https://www.themealdb.com/images/media/meals/020z181619788503.jpg",
+      "id": 11
+    },
+    {
+      "title": "",
+      "price": "",
+      "bowis": "",
+      "category": "",
+      "img": "https://www.themealdb.com/images/media/meals/vptqpw1511798500.jpg",
+      "id": 12
+    }
+  ]
+}

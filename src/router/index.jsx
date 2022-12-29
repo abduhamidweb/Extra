@@ -18,15 +18,12 @@ import Desert from "../Pages/Home/HomeNavigatePages/Desert";
 import Grill from "../Pages/Home/HomeNavigatePages/Grill";
 import HotDishes from "../Pages/Home/HomeNavigatePages/HotDishes";
 import Soup from "../Pages/Home/HomeNavigatePages/Soup";
-
-
 const index = () => {
- 
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route index element={<HotDishes/>} />
+          <Route index element={<HotDishes />} />
           <Route path="colddishes" element={<Colddishes />} />
           <Route path="soup" element={<Soup />} />
           <Route path="grill" element={<Grill />} />
@@ -40,7 +37,6 @@ const index = () => {
           <Route path="/desert" element={<Desert />} />
         </Route>
 
-       
         <Route path="/home" element={<Home />}></Route>
         <Route path="/percentage" element={<Percent />}></Route>
         <Route path="/database" element={<DataBase />}></Route>
@@ -51,7 +47,10 @@ const index = () => {
           <Route path="/settings/restaurant" element={<Restaurant />}></Route>
           <Route path="/settings/management" element={<Management />}></Route>
           <Route path="/settings/security" element={<Security />}></Route>
-          <Route path="/settings/notification" element={<Notification />}></Route>
+          <Route
+            path="/settings/notification"
+            element={<Notification />}
+          ></Route>
           <Route path="/settings/about" element={<About />}></Route>
         </Route>
       </Routes>

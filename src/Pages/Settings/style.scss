@@ -28,43 +28,45 @@ h2 {
     &:hover {
       background: rgba(234, 124, 105, 0.26);
     }
-          .iconWrapper {
-    margin-left: 25px;
-    color: #EA7C69;
-  }
-      .textWrapper {
-    padding-left: 10px;
-    h4 {
-      font-family: "Barlow";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 130%;
-      margin-bottom: 0;
-      /* or 18px */
-      text-align: start;
-
-      /* White */
-
-      color: #EA7C69;
+    .iconWrapper {
+      margin-left: 25px;
+      color: #ea7c69;
     }
-    p {
-      font-family: "Barlow";
-      font-style: normal;
-      font-weight: 400;
-      margin-bottom: 0;
-      font-size: 12px;
-      line-height: 140%;
-      /* identical to box height, or 17px */
+    .textWrapper {
+      padding-left: 10px;
+      h4 {
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 0;
+        /* or 18px */
+        text-align: start;
 
-      /* Text/Light */
+        /* White */
 
-      color: #abbbc2;
+        color: #ea7c69;
+      }
+      p {
+        font-family: "Barlow";
+        text-align: start;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 0;
+        font-size: 12px;
+        line-height: 140%;
+        /* identical to box height, or 17px */
+
+        /* Text/Light */
+
+        color: #abbbc2;
+      }
     }
-  }
   }
   .nav-tabs .nav-item.show .nav-link,
   .nav-tabs .nav-link {
+    cursor: pointer;
     border: none;
     margin: 0 !important;
     display: flex;
@@ -76,46 +78,219 @@ h2 {
     &:hover {
       background: transparent;
     }
-      .iconWrapper {
-    margin-left: 25px;
-    color: #abbbc2;
-  }
-  .textWrapper {
-    padding-left: 10px;
-    h4 {
-      font-family: "Barlow";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 130%;
-      margin-bottom: 0;
-      /* or 18px */
-      text-align: start;
-
-      /* White */
-
-      color: #ffffff;
-    }
-    p {
-      font-family: "Barlow";
-      font-style: normal;
-      font-weight: 400;
-      margin-bottom: 0;
-      font-size: 12px;
-      line-height: 140%;
-      /* identical to box height, or 17px */
-
-      /* Text/Light */
-
+    .iconWrapper {
+      position: relative;
+      top: 5px;
+      margin-left: 25px;
       color: #abbbc2;
     }
-  }
-  }
+    .textWrapper {
+      padding-left: 10px;
+      h4 {
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 0;
+        /* or 18px */
+        text-align: start;
 
+        /* White */
+
+        color: #ffffff;
+      }
+      p {
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 0;
+        font-size: 12px;
+        line-height: 140%;
+        /* identical to box height, or 17px */
+
+        /* Text/Light */
+        text-align: start;
+
+        color: #abbbc2;
+      }
+    }
+  }
 }
 
-.select_sidebar_content{
-      border-radius: 8px;
+.select_sidebar_content {
+  border-radius: 8px;
+  background: #1f1d2b;
+  height: 90vh;
+  .contentTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .btn {
+    border: 1px solid #393c49;
+    filter: drop-shadow(0px 8px 24px rgba(146, 136, 224, 0.3));
+    border-radius: 8px;
+    color: white;
+    i {
+      margin-right: 20px;
+    }
+  }
+}
+.ManegWraper {
+  position: relative;
+  .nav {
+    height: 50.5px;
+    .nav-item {
+      padding: 0px 32px 0px 0px !important;
+    }
+    .nav-link {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      /* White */
+      color: #ffffff;
+
+      &:hover {
+        background: transparent;
+        text-decoration: none;
+      }
+    }
+    .nav-link.active {
+      background: transparent;
+      z-index: 2;
+      color: #ea7c69 !important;
+
+      &:hover {
+        background: transparent;
+        text-decoration: none;
+      }
+    }
+    .nav-link.active::after {
+      background: #ea7c69 !important;
+      position: absolute !important;
+      width: 37px;
+      height: 4px;
+      top: 20px !important;
+      left: 19px !important;
+      right: 0 !important;
+      margin-top: 30px;
+      z-index: 11;
+    }
+  }
+  &::after {
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    background: #393c49;
+    display: block;
+    z-index: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+  }
+}
+.cardAddWrapper {
+  overflow-y: scroll;
+  height: 45vh;
+  .cursor {
+    cursor: pointer;
+  }
+  .card-add {
+    min-height: 350px;
+    position: relative;
+    .add-dishes {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h6 {
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        /* or 22px */
+
+        text-align: center;
+
+        /* Primary Color */
+
+        color: #ea7c69;
+      }
+      i {
+        color: #ea7c69;
+      }
+    }
+  }
+}
+.cardObServer {
+  .discard {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    /* identical to box height, or 20px */
+
+    /* Primary Color */
+
+    color: #ea7c69;
+    border: 2px solid #ea7c69;
+  }
+  .save {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    /* identical to box height, or 20px */
+
+    /* Base / BG */
+
+    color: #fafafa;
+    background: #ea7c69;
+    /* Dropshadow */
+
+    box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
+    border-radius: 8px;
+  }
+}
+.modalBeckBg {
+  background: rgba(0, 0, 0, 0.581);
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  position: absolute;
+  z-index: 22222;
+  display: none;
+}
+.modalWindow {
+  width: 600px;
+  height: 450px;
+  background: #393c49;
+  position: absolute;
+  z-index: 111111;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  h4 {
+    i {
+      cursor: pointer;
+    }
+  }
+  .btn {
+    background: #1f1d2b8b;
+    color: #ffffff;
+  }
+  .btn:active {
     background: #1f1d2b;
-    height: 90vh;
+    box-shadow: none !important;
+  }
 }
