@@ -67,6 +67,7 @@ const orderData=[]
     } 
 })
 
+
   
   const navigate = useNavigate()
   return (
@@ -155,7 +156,28 @@ const orderData=[]
            </span>
             </div>
             <hr className="m-0"/>
-{/* <MostTypeCircle/> */}
+
+<div className="infoCircleWrapp d-flex alig-items-center">
+  <div className="circleWrapp">
+<MostTypeCircle/>
+  </div>
+
+  <div className="circleInfoText px-2 py-3 d-flex flex-column ms-3">
+<div className="circleInfoCard my-1 Dinein">
+  <h3 className="cirleInfoTitle m-0">Dine In</h3>
+  <p className="circleInfoDesc m-0">200 customers</p>
+</div>
+<div className="circleInfoCard my-1 Togo">
+  <h3 className="cirleInfoTitle m-0">To Go</h3>
+  <p className="circleInfoDesc m-0">124 customers</p>
+</div>
+<div className="circleInfoCard my-1 Deliver">
+  <h3 className="cirleInfoTitle m-0">Delivery</h3>
+  <p className="circleInfoDesc m-0">264 customers</p>
+</div>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

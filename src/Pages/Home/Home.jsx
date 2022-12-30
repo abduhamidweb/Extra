@@ -75,16 +75,16 @@ const Home = () => {
   // }, []);
   return (
     <>
-          <div className="row">
-            <div className="col-8 WrapperLeftPage">
-              <PageTitle
-                input={"input put"}
-                title="Jaegar Resto"
-                date="Tuesday, 2 Feb 2021"
-                icon="bi-search"
-              />
-              <NavigateLinks />
-              {/* <div className="row WrapperCard">
+      <div className="row">
+        <div className="col-8 WrapperLeftPage">
+          <PageTitle
+            input={"input put"}
+            title="Jaegar Resto"
+            date="Tuesday, 2 Feb 2021"
+            icon="bi-search"
+          />
+          <NavigateLinks />
+          {/* <div className="row WrapperCard">
                 <div className="col-6">
                   <h3>Choose Dishes</h3>
                 </div>
@@ -128,13 +128,23 @@ const Home = () => {
                   </ul>
                 </nav>
               </div> */}
-            </div>
-            <div className="col-4 py-4 pt-2 ordersWrapp1">
-              <div className="ordersWrapp2">
-                <OrdersHome />
-              </div>
-            </div>
+
+          <div className="Pay">
+            <span className="Pay__Span">
+              <h2 className="Pay__Span__title">Payment</h2>
+              <p className="Pay__Span__deck">3 payment method available</p>
+            </span>
+            <hr />
+
+            <h2 className="Pay__title">Payment Method</h2>
           </div>
+        </div>
+        <div className="col-4 py-4 pt-2 ordersWrapp1">
+          <div className="ordersWrapp2">
+            <OrdersHome />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

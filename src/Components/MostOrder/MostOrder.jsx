@@ -10,8 +10,8 @@ const MostOrder = ({data:{ MostImg, MostTitle, MostDescription }}) => {
           <img src={MostImg} alt="img" />
         </div>
         <div className="MostOrderInfo__texts">
-          <h4>{MostTitle}</h4>
-          <p>{MostDescription}</p>
+          <h4 className='m-0 p-0'>{MostTitle}</h4>
+          <p className='m-0 p-0'>{MostDescription}</p>
         </div>
       </div>
     </>

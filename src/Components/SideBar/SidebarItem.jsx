@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./sidebar.module.scss";
 import { Link, NavLink } from "react-router-dom";
-const SidebarItem = ({ link, icon }) => {
+const SidebarItem = ({ link, icon, realIcon }) => {
   return (
     <>
       <li className={style.navigationItem}>

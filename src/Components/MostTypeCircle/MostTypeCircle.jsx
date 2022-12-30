@@ -4,19 +4,17 @@ import {
   RadialBar,
   Legend,
   ResponsiveContainer,
-  Tooltip
+  Tooltip,
 } from "recharts";
-import "./styleCircleMost.css"
+import "./styleCircleMost.css";
 
 const MostTypeCircle = () => {
   const data = [
-
- 
     {
-      name: "30-34",
+      name: "None",
       uv: 100,
       pv: 1398,
-      fill: "#1F1D2B",
+      fill: "rgba(1, 1, 15, 0.8)",
     },
     {
       name: "Dine In",
@@ -35,9 +33,7 @@ const MostTypeCircle = () => {
       uv: 80,
       pv: 4800,
       fill: "rgba(101, 176, 246, 1)",
-      
     },
-
   ];
 
   const style = {
@@ -49,34 +45,28 @@ const MostTypeCircle = () => {
 
   return (
     <>
-<div className="mostCircle">
-<RadialBarChart
-        width={320}
-        height={250}
-        innerRadius="30%"
-        outerRadius="80%"
-        data={data}
-        startAngle={180}
-        endAngle={-180}
-      >
-        <RadialBar
-          minAngle={15}
-          
-          background
-          clockWise={true}
-          dataKey="uv"
-        />
-        <Legend
-          iconSize={10}
-          width={120}
-          height={140}
-          layout="vertical"
-          verticalAlign="middle"
-          align="right"
-        />
-        <Tooltip />
-      </RadialBarChart>
-</div>
+      <div className="mostCircle">
+        <RadialBarChart
+          width={200}
+          height={250}
+          innerRadius="50%"
+          outerRadius="120%"
+          data={data}
+          startAngle={180}
+          endAngle={-180}
+        >
+          <RadialBar minAngle={15} background clockWise={true} dataKey="uv" />
+          <Legend
+            iconSize={10}
+            width={100}
+            height={140}
+            layout="vertical"
+            verticalAlign="middle"
+            align="right"
+          />
+          <Tooltip />
+        </RadialBarChart>
+      </div>
     </>
   );
 };
