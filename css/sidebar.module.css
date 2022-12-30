@@ -1,0 +1,164 @@
+.Sidebar {
+  width: 104px;
+  height: 100%;
+  background: #1f1d2b;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  z-index: 123;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 14px 0;
+  position: relative;
+}
+
+.navigationItemLogo {
+  display: block;
+  background-color: aliceblue;
+  background: rgba(235, 149, 106, 0.2470588235);
+  border-radius: 12px;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  padding: 13px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navigationLink {
+  border-radius: 12px 0px 0px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  width: 95%;
+  color: #ea7c69;
+  margin-left: auto;
+}
+
+.activeItem {
+  background: #252836;
+  border-radius: 12px 0px 0px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  width: 95%;
+  color: #ea7c69;
+  margin-left: auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.iconWrapper {
+  padding: 13px;
+  border-radius: 8px;
+  color: #ea7c69;
+}
+
+.activeItem::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  top: -50px;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px #252836;
+  background: transparent;
+  pointer-events: none;
+}
+
+.activeItem::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  bottom: -50px;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px #252836;
+  background: transparent;
+  pointer-events: none;
+}
+
+.activeItem .iconWrapper {
+  padding: 8px 15px !important;
+  background: #ea7c69;
+  box-shadow: 0px 4px 4px rgba(234, 124, 105, 0.32);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.navigationItemLogout {
+  display: block;
+  border-radius: 12px;
+  width: 50%;
+  margin: 20px auto;
+  display: flex;
+  padding: 13px;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.smSidebar {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .Sidebar {
+    display: none;
+  }
+  .smSidebar {
+    position: relative;
+    display: block;
+    background: #1f1d2b;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .smNavigation {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+  }
+  .activeItem::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    top: -50px;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px #252836;
+    background: transparent;
+    pointer-events: none;
+    display: none;
+  }
+  .activeItem::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    bottom: -50px;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px #252836;
+    background: transparent;
+    pointer-events: none;
+    display: none;
+  }
+  .activeItem {
+    border-radius: 12px;
+  }
+}/*# sourceMappingURL=sidebar.module.css.map */

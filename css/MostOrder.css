@@ -1,0 +1,45 @@
+.MostCards2 {
+  display: none;
+  margin-top: 0px !important;
+}
+
+.MostCards2-blobk {
+  display: block;
+}
+
+.MostCards {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.MostOrderInfo {
+  gap: 12px;
+  align-items: center;
+}
+.MostOrderInfo__img img {
+  border-radius: 50%;
+  width: 45px !important;
+  height: 45px !important;
+}
+.MostOrderInfo__texts h4 {
+  font-family: Barlow;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.MostOrderInfo__texts p {
+  font-family: Barlow;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(131, 129, 129) !important;
+}
+
+.viewAll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  border: 1px solid #ea7c69;
+  border-radius: 8px;
+  margin-top: 20px;
+}/*# sourceMappingURL=MostOrder.css.map */
