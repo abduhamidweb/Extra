@@ -1,8 +1,6 @@
-import React from 'react';
-import "./MostOrder.scss"
-const MostOrder = ({data:{ MostImg, MostTitle, MostDescription }}) => {
-
-
+import React from "react";
+import "./MostOrder.scss";
+const MostOrder = ({ data: { MostImg, MostTitle, MostDescription } }) => {
   return (
     <>
       <div className="MostOrderInfo d-flex">
@@ -10,8 +8,8 @@ const MostOrder = ({data:{ MostImg, MostTitle, MostDescription }}) => {
           <img src={MostImg} alt="img" />
         </div>
         <div className="MostOrderInfo__texts">
-          <h4 className='m-0 p-0'>{MostTitle}</h4>
-          <p className='m-0 p-0'>{MostDescription}</p>
+          <h4 className="m-0 p-0">{MostTitle}</h4>
+          <p className="m-0 p-0">{MostDescription}</p>
         </div>
       </div>
     </>

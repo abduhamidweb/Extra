@@ -25,8 +25,6 @@ const SignUp = () => {
            Info.push(localInfo);
            localStorage.setItem("userData", JSON.stringify(Info));
     }
-
- 
     return (
       <>
         <section>

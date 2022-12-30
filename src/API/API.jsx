@@ -1,6 +1,6 @@
 import axios from "axios";
 const BASE_URL = "https://www.themealdb.com/api/json/v1/1";
-
+const beseUrl = "http://localhost:8080";
 const API = {
   getAllCategorys: async () => {
     const res = await axios.get(`${BASE_URL}/categories.php`);
@@ -23,5 +23,13 @@ const API = {
     const res = await axios.get(`${BASE_URL}//lookup.php?i=${ID}`);
     return res.data;
   },
+  addUser: async (arr) => {
+    const res = await axios.get(`${beseUrl}/${arr}`);
+    return res.data;
+  },
+  addCard: async (addUser) => {
+    const res = await axios.post(`${beseUrl}/${addUser}`);
+    return res.data
+  }
 };
 export default API;

@@ -1,0 +1,28 @@
+{
+  "addUser": [
+    {
+      "title": "Spicy seasoned seafood noodles",
+      "price": "99",
+      "bowis": "20 Bowls",
+      "category": "Beef",
+      "img": "https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg",
+      "id": 5
+    },
+    {
+      "id": 7,
+      "title": "Spicy seasoned seafood noodles",
+      "price": "3.39",
+      "bowis": "20 Bowls",
+      "category": "beef",
+      "img": "https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg"
+    },
+    {
+      "title": "Test! food is nameGoodJop",
+      "price": "Test! food is price",
+      "bowis": "Test! food is Bowls",
+      "category": "Test! food is Category",
+      "img": "Test! Img is Url",
+      "id": 8
+    }
+  ]
+}
