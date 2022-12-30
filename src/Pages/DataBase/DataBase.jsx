@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import Users from "../../Components/Users/Users";
+import MostTypeCircle from "../../Components/MostTypeCircle/MostTypeCircle"
 
 const DataBase = () => {
   const [valueMeal,setValueMeal]=useState("today")
@@ -66,6 +67,7 @@ const orderData=[]
     } 
 })
 
+
   
   const navigate = useNavigate()
   return (
@@ -86,7 +88,7 @@ const orderData=[]
               bgIcon="rgba(136, 224, 145, 0.24)"
             />
             <Dashbaord
-              iconInfo="bi bi-box-arrow-down"
+              iconInfo="bi bi-bookmark-dash"
               foiz="-12.40%"
               arrowIcon="bi bi-arrow-down"
               CardPrice="23,456"
@@ -94,15 +96,15 @@ const orderData=[]
               iconInfoColor="#FFB572"
               foizColor=" #FF7CA3"
               arrowColor="#FF7CA3"
-              bgIcon="rgba(136, 224, 145, 0.24)"
+              bgIcon="rgba(255, 100, 113, 0.24)"
             />
             <Dashbaord
-              iconInfo="bi bi-people-fill"
+              iconInfo="bi bi-people"
               foiz="+2.40%"
               arrowIcon="bi bi-arrow-up"
               CardPrice="1,234"
               CardTotol="Total Revenue"
-              iconInfoColor="#FFB572"
+              iconInfoColor="#2D9CDB"
               foizColor=" #50D1AA"
               arrowColor="#50D1AA"
               bgIcon="rgba(136, 224, 145, 0.24)"
@@ -110,8 +112,8 @@ const orderData=[]
           </div>
           <Users />
         </div>
-        <div className="col-4 MostOrderCard">
-          <div className="OrderMailWrap">
+        <div className="col-4 ">
+          <div className="OrderMailWrap MostOrderCard">
             <div className="mostTitleSelect d-flex">
               <h2 className="mostTitleSelect__mostTitle">Most Ordered</h2>
               <span className="MostSpan">
@@ -139,6 +141,43 @@ const orderData=[]
             >
               View All
             </button>
+          </div>
+
+          <div className="mostTypeCircleWrapp">
+            <div className="topMostTypeWrapp d-flex mb-2 justify-content-between align-item-center">
+              <h2 className="topMostTypeTitle m-0">
+              Most Type of Order
+              </h2>
+           <span className="mostCircleSelectWrapp">
+            <select id="circleSelect" className="circleSelect">
+              <option value="Tooday">Tooday</option>
+              <option value="Lastday">Lastday</option>
+            </select>
+           </span>
+            </div>
+            <hr className="m-0"/>
+
+<div className="infoCircleWrapp d-flex alig-items-center">
+  <div className="circleWrapp">
+<MostTypeCircle/>
+  </div>
+
+  <div className="circleInfoText px-2 py-3 d-flex flex-column ms-3">
+<div className="circleInfoCard my-1 Dinein">
+  <h3 className="cirleInfoTitle m-0">Dine In</h3>
+  <p className="circleInfoDesc m-0">200 customers</p>
+</div>
+<div className="circleInfoCard my-1 Togo">
+  <h3 className="cirleInfoTitle m-0">To Go</h3>
+  <p className="circleInfoDesc m-0">124 customers</p>
+</div>
+<div className="circleInfoCard my-1 Deliver">
+  <h3 className="cirleInfoTitle m-0">Delivery</h3>
+  <p className="circleInfoDesc m-0">264 customers</p>
+</div>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

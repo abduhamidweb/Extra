@@ -9,6 +9,7 @@ import FormAddcard from "./Components/FormAddCard/FormAddcard";
 const App = () => {
   // const foodOrderSet = new Set([{ id: 1,name:"abd"},]);
   // console.log(foodOrderSet)
+
   const [category, setCategory] = useState([]);
   const [categoryItem, setCategoryItem] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -68,6 +69,7 @@ const App = () => {
     fetchCategoryName("Seafood");
     fetchAddUser("addUser");
   }, []);
+
   return (
     <>
       <context.Provider

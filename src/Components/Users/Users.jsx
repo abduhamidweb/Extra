@@ -80,13 +80,13 @@ const Users = () => {
           <div className="col-12 userSorts">
             <h2>Order Report</h2>
             <button className="btn">
-              <i class="bi bi-filter"></i>
+              <i className="bi bi-filter"></i>
               <span className="ms-2">Filter Order</span>
             </button>
           </div>
           <div className="col-12 table-responsive-sm table-responsive-md table-responsive-lg tableWrapper">
             <div className="table-striped ">
-              <table class="table">
+              <table className="table">
                 <thead>
                   <tr>
                     <th scope="col">Customer</th>

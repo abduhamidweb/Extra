@@ -1,68 +1,158 @@
-.MostOrderCard{
-    padding: 24px 24px 24px 24px !important;
-    background: #1F1D2B;
-    border-radius: 8px;
-    margin-top: 24px;
+.MostOrderCard {
+  padding: 24px 24px 24px 24px;
+  background: #1f1d2b;
+  border-radius: 8px;
 
-
-    .btn-mostOrder{
-        width: 100%;
-        border: 1px solid #EA7C69;
-        padding: 10px !important;
-        margin-top: 14px;
-        font-size: 14px !important;
-        color: #EA7C69;
-    }
+  // margin-top: 24px;
+  .btn-mostOrder {
+    width: 100%;
+    border: 1px solid #ea7c69;
+    padding: 10px !important;
+    margin-top: 14px;
+    font-size: 14px !important;
+    color: #ea7c69;
+  }
 }
-.mostTitleSelect{
-    justify-content: space-between;
+.mostTitleSelect {
+  justify-content: space-between;
 
-
-    &__mostTitle{
-        font-family: Barlow;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-        letter-spacing: 0em;
-        text-align: left;
-        margin-top: 7px;
-    }
-    &__MostSelect{
-        border: none;
-        width: 95px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        outline: none !important;
-        font-size: 16px !important;
-        border-radius: 8px;
-        background: transparent;
-        color: white;
-
-        option{
-            //styleName: Body / Normal - Medium;
-            font-family: Barlow;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 0em;
-            text-align: left;
-            background: #1F1D2B;
-            padding: 5px 0px !important;
-        }
-    }
-}
-.mostTitleSelect:focus{
+  &__mostTitle {
+    font-family: Barlow;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 7px;
+  }
+  &__MostSelect {
+    border: none;
+    width: 95px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
     outline: none !important;
-    border: none !important;
-}
-.MostOrderInfo{
-    margin-top:20px !important;
-}
-.MostSpan{
-    border: 1px solid #6e6d6d !important;
-    height: 45px;
-    padding: 10px;
+    font-size: 16px !important;
     border-radius: 8px;
+    background: transparent;
+    color: white;
+
+    option {
+      //styleName: Body / Normal - Medium;
+      font-family: Barlow;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0em;
+      text-align: left;
+      background: #1f1d2b;
+      padding: 5px 0px !important;
+    }
+  }
 }
+.mostTitleSelect:focus {
+  outline: none !important;
+  border: none !important;
+}
+.MostOrderInfo {
+  margin-top: 20px !important;
+}
+.MostSpan {
+  border: 1px solid #6e6d6d !important;
+  height: 45px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.mostTypeCircleWrapp {
+  padding: 24px 24px 24px 24px;
+  background: #1f1d2b;
+  border-radius: 8px;
+
+  margin-top: 24px;
+  .topMostTypeTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #fff;
+  }
+  .mostCircleSelectWrapp {
+    display: flex;
+    align-items: center;
+    border: 1px solid #393C49;
+border-radius: 8px;
+  }
+  .circleSelect {
+    padding: 14px 14px 14px 14px;
+    background: transparent;
+    color: #fff;
+    border: none !important;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    option {
+      font-family: Barlow;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0em;
+      text-align: left;
+      background: #1f1d2b;
+      padding: 5px 0px !important;
+    }
+  }
+  .circleInfoCard {
+    position: relative;
+    .cirleInfoTitle {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      color: #fff;
+    }
+    .circleInfoDesc {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #abbbc2;
+    }
+  }
+  .Dinein::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff7ca3;
+    top: 4px;
+    left: -30px;
+  }
+  .Togo::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFB572;
+    top: 4px;
+    left: -30px;
+  }
+  .Deliver::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #65B0F6;
+    top: 4px;
+    left: -30px;
+  }
+}
+

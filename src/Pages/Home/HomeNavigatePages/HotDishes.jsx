@@ -13,6 +13,7 @@ import context from "../../../context/context";
 import App from "../../../App";
 const HotDishes = () => {
   const localdata = [];
+  const [date2, setDate2]=useState([])
   const [filterBookmark, setFilterBookmark] = useState([]);
   const {
     lastData,
@@ -52,11 +53,16 @@ const HotDishes = () => {
         })
       );
     });
+0
+ 
+ 
     localStorage.setItem("data", JSON.stringify(newData));
   };
+
+
   useEffect(() => {
     funcc();
-  }, []);
+  }, [API.openById()]);
 
   return (
     <>
@@ -89,7 +95,7 @@ const HotDishes = () => {
           )}
         </div>
         <nav aria-label="Page navigation example">
-          <ul class="pagination">
+          <ul className="pagination">
             {pageNumber.map((pageEl) => {
               return (
                 <li

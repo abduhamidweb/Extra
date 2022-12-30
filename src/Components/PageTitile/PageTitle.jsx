@@ -18,7 +18,7 @@ const PageTitle = ({ input, title, date, icon }) => {
           <div className="col-6 text-end">
             { icon ? 
               <div className="PageInputWrapper">
-                <i class={`bi ${icon}`}></i> 
+                <i className={`bi ${icon}`}></i> 
                   <input
                     type={"text"}
                     className="PageTitlt"

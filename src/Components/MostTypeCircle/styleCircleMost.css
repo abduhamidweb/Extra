@@ -1,0 +1,14 @@
+.mostCircle .recharts-wrapper svg{
+    height: 220px !important;
+}
+.recharts-wrapper{
+    width: 100% !important;
+    height: 220px !important;
+}
+.recharts-legend-wrapper{
+    display: none;
+}
+.recharts-default-legend{
+    display: none;
+    
+}

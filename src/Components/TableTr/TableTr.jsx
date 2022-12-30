@@ -18,7 +18,7 @@ const TableTr = ({ data }) => {
       <tr>
         <td className="userIMag" scope="row">
           <span className="round">
-            <i class={data.img}></i>
+            <i className={data.img}></i>
           </span>
           <span className="mx-2">{data.names}</span>
         </td>

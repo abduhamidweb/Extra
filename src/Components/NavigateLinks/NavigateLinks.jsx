@@ -10,10 +10,10 @@ const NavigateLinks = () => {
     return (
       <>
         {/* <!-- Tabs navs --> */}
-        <ul class="nav nav-tabs mb-3 nav-tabs2" id="ex1" role="tablist">
-          <li class="nav-item nav-itemm2" role="presentation">
+        <ul className="nav nav-tabs mb-3 nav-tabs2" id="ex1" role="tablist">
+          <li className="nav-item nav-itemm2" role="presentation">
             <a
-              class="nav-link active"
+              className="nav-link active"
               id="ex2-tab-1"
               data-mdb-toggle="tab"
               href="#ex2-tabs-1"
@@ -24,9 +24,9 @@ const NavigateLinks = () => {
               Hot Dishes
             </a>
           </li>
-          <li class="nav-item nav-itemm2" role="presentation">
+          <li className="nav-item nav-itemm2" role="presentation">
             <a
-              class="nav-link"
+              className="nav-link"
               id="ex2-tab-2"
               data-mdb-toggle="tab"
               href="#ex2-tabs-2"
@@ -37,9 +37,9 @@ const NavigateLinks = () => {
               Cold Dishes
             </a>
           </li>
-          <li class="nav-item nav-itemm2" role="presentation">
+          <li className="nav-item nav-itemm2" role="presentation">
             <a
-              class="nav-link"
+              className="nav-link"
               id="ex2-tab-3"
               data-mdb-toggle="tab"
               href="#ex2-tabs-3"
@@ -50,9 +50,9 @@ const NavigateLinks = () => {
               Soup
             </a>
           </li>
-          <li class="nav-item nav-itemm2" role="presentation">
+          <li className="nav-item nav-itemm2" role="presentation">
             <a
-              class="nav-link"
+              className="nav-link"
               id="ex2-tab-4"
               data-mdb-toggle="tab"
               href="#ex2-tabs-4"
@@ -63,9 +63,9 @@ const NavigateLinks = () => {
               Grill
             </a>
           </li>
-          <li class="nav-item nav-itemm2" role="presentation">
+          <li className="nav-item nav-itemm2" role="presentation">
             <a
-              class="nav-link"
+              className="nav-link"
               id="ex2-tab-5"
               data-mdb-toggle="tab"
               href="#ex2-tabs-5"
@@ -76,9 +76,9 @@ const NavigateLinks = () => {
               Appetizer
             </a>
           </li>
-          <li class="nav-item nav-itemm2" role="presentation">
+          <li className="nav-item nav-itemm2" role="presentation">
             <a
-              class="nav-link"
+              className="nav-link"
               id="ex2-tab-6"
               data-mdb-toggle="tab"
               href="#ex2-tabs-6"
@@ -93,9 +93,9 @@ const NavigateLinks = () => {
         {/* <!-- Tabs navs --> */}
 
         {/* <!-- Tabs content --> */}
-        <div class="tab-content" id="ex1-content">
+        <div className="tab-content" id="ex1-content">
           <div
-            class="tab-pane fade show active"
+            className="tab-pane fade show active"
             id="ex2-tabs-1"
             role="tabpanel"
             aria-labelledby="ex2-tab-1"
@@ -103,7 +103,7 @@ const NavigateLinks = () => {
             <HotDishes />
           </div>
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="ex2-tabs-2"
             role="tabpanel"
             aria-labelledby="ex2-tab-2"
@@ -111,7 +111,7 @@ const NavigateLinks = () => {
            <Colddishes/>
           </div>
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="ex2-tabs-3"
             role="tabpanel"
             aria-labelledby="ex2-tab-3"
@@ -119,7 +119,7 @@ const NavigateLinks = () => {
             <Soup/>
           </div>
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="ex2-tabs-4"
             role="tabpanel"
             aria-labelledby="ex2-tab-4"
@@ -127,7 +127,7 @@ const NavigateLinks = () => {
            <Grill/>
           </div>
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="ex2-tabs-5"
             role="tabpanel"
             aria-labelledby="ex2-tab-5"
@@ -135,7 +135,7 @@ const NavigateLinks = () => {
             <Appetizer/>
           </div>
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="ex2-tabs-6"
             role="tabpanel"
             aria-labelledby="ex2-tab-6"
