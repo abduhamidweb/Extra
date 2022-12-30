@@ -4,32 +4,32 @@ import OrdersCard from "./OrdersCard";
 import context from "../../context/context";
 import "./styleOrders.css";
 
-const OrdersHome = () => {
-
+const OrdersHome = ({payRef}) => {
   let arr = JSON.parse(localStorage.getItem("data"));
-  const [totalSize,setTotelSize]=useState(0)
+  const [totalSize, setTotelSize] = useState(0);
   const locatItemId = [];
-
+console.log(payRef.current)
   function allId() {
     if (arr) {
       arr.map((item) => {
         locatItemId.push(item.idMeal.substring(1, 3));
         // console.log(locatItemId);
       });
-      
-     let a = locatItemId.reduce((a, b) => {
-        return a*1 + b*1 ;
-      }, 0)
-setTotelSize(a)
-      
-    }
 
+      let a = locatItemId.reduce((a, b) => {
+        return a * 1 + b * 1;
+      }, 0);
+      setTotelSize(a);
+    }
   }
-  
 
   useEffect(() => {
     allId();
   }, []);
+
+  function openPayModal(){
+    payRef.current.style.right="0px"
+  }
 
   return (
     <>
@@ -142,14 +142,13 @@ setTotelSize(a)
             <span className="totalPriceWrapp d-flex align-items-center">
               <h4 className="totalPriceTitle m-0"></h4>
 
-              <h4 className="totalPriceTitle m-0 ps-1">$ {""}
-             {
-              totalSize
-             }
+              <h4 className="totalPriceTitle m-0 ps-1">
+                $ {""}
+                {totalSize}
               </h4>
             </span>
           </div>
-          <button className="btn btn navigateToPayPage d-block w-100 mt-3">
+          <button className="btn btn navigateToPayPage d-block w-100 mt-3" onClick={()=>openPayModal()}>
             Continue to Payment
           </button>
         </div>
