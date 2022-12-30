@@ -15,31 +15,76 @@ const Setting = () => {
   const [blows, setBlows] = useState("");
   const [imgUrl, setImgUrl] = useState("");
   const [category, setCategor] = useState("");
+  const [statusWrap, setStatusWrap] = useState(false);
+  const [cardDataAtr, setCardDataAtr] = useState("");
+  const [cardText, setCardText] = useState("add card dishs");
+
   const formRef = useRef();
   const datas = useRef();
   const Modal = useRef();
   const ModalWrap = useRef();
   const { addUser, loading } = useContext(context);
 
-  function hendlerfunctions(e) {
+  function hendlerfunctions() {
+    function addUserCard() {
+      try {
+        fetch(`http://localhost:8080/addUser`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: mealName,
+            price: price,
+            bowis: blows,
+            category: category,
+            img: imgUrl,
+          }),
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    addUserCard();
+  }
+  function hendlerfunctions2(e) {
+    function UpdateUserCard() {
+      try {
+        fetch(`http://localhost:8080/addUser/${e}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: mealName,
+            price: price,
+            bowis: blows,
+            category: category,
+            img: imgUrl,
+          }),
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    UpdateUserCard();
+  }
+  function GetDefoultValue(e) {
     try {
-      fetch(`http://localhost:8080/addUser`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: mealName,
-          price: price,
-          bowis: blows,
-          category: category,
-          img: imgUrl,
-        }),
-      });
-    } catch (err) {
-      console.log(err);
+      fetch(`http://localhost:8080/addUser/${e}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setBlows(data.bowis);
+          setPrice(data.price);
+          setImgUrl(data.img);
+          setCategor(data.category);
+          setMealName(data.title);
+        });
+    } catch (error) {
+      console.log(error);
     }
   }
+
   return (
     <>
       {/* Modal window  start*/}
@@ -58,7 +103,9 @@ const Setting = () => {
               </h4>
               <form
                 onSubmit={() => {
-                  hendlerfunctions();
+                  statusWrap
+                    ? hendlerfunctions()
+                    : hendlerfunctions2(cardDataAtr);
                 }}
               >
                 <Input
@@ -104,7 +151,7 @@ const Setting = () => {
                   setValue={setImgUrl}
                 />
                 <button className="btn w-100 mt-3 " type="submit">
-                  add meal card
+                  {cardText}
                 </button>
               </form>
             </div>
@@ -357,13 +404,33 @@ const Setting = () => {
                     aria-labelledby="ex1-tab-1r"
                   >
                     <div className="container">
-                      <div className="row cardAddWrapper" ref={datas}>
+                      <div
+                        className="row cardAddWrapper"
+                        ref={datas}
+                        onClick={(e) => {
+                          if (
+                            e.target.classList.contains("edit-dish") ||
+                            e.target.classList.contains("btn-txt") ||
+                            e.target.classList.contains("bi-pencil-square")
+                          ) {
+                            setCardText("update meal dish");
+                            setCardDataAtr(e.target.getAttribute("data-id"));
+                            Modal.current.style.display = "block";
+                            ModalWrap.current.style.display = "block";
+                            setStatusWrap(false);
+                            GetDefoultValue(e.target.getAttribute("data-id"));
+                          }
+                        }}
+                      >
                         <div className="col-4 ">
                           <div
                             className="card card-add cursor"
                             onClick={() => {
                               ModalWrap.current.style.display = "block";
                               Modal.current.style.display = "block";
+                              setCardText("add meal dish");
+                              setStatusWrap(true);
+                              statusWrap(true);
                             }}
                           >
                             <div className="add-dishes">
