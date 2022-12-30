@@ -69,6 +69,7 @@ const DataBase = () => {
 
   const navigate = useNavigate();
   return (
+    
     <>
       <div className="row m-0 p-0">
         <div className="col-8 pt-3 px-0">

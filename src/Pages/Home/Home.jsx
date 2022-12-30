@@ -430,6 +430,7 @@ const Home = () => {
             </div>
             {/* <!-- Tabs content --> */}
           </div>
+          
         </div>
         <div className="col-4 py-4 pt-2 ordersWrapp1 m-0">
           <div className="ordersWrapp2">
