@@ -7,8 +7,6 @@ import Router from "./router";
 import "./App.css";
 import FormAddcard from "./Components/FormAddCard/FormAddcard";
 const App = () => {
-  // const foodOrderSet = new Set([{ id: 1,name:"abd"},]);
-  // console.log(foodOrderSet)
 
   const [category, setCategory] = useState([]);
   const [categoryItem, setCategoryItem] = useState([]);

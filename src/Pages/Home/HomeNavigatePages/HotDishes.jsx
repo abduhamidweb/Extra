@@ -70,7 +70,7 @@ const HotDishes = () => {
         <div className="col-6">
           <h3>Choose Dishes</h3>
         </div>
-        <div className="col-6 text-end ">
+        <div className="col-6 text-end">
           <div className="select text-end">
             <select
               name=""
@@ -85,7 +85,7 @@ const HotDishes = () => {
             </select>
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-4">
           {loading ? (
             lastData.map((item, key) => {
               return <MainCard key={key} data={item} />;
