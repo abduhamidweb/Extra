@@ -4,32 +4,13 @@ import OrdersCard from "./OrdersCard";
 import context from "../../context/context";
 import "./styleOrders.css";
 
-const OrdersHome = () => {
-
-  let arr = JSON.parse(localStorage.getItem("data"));
-  const [totalSize,setTotelSize]=useState(0)
-  const locatItemId = [];
-
-  function allId() {
-    if (arr) {
-      arr.map((item) => {
-        locatItemId.push(item.idMeal.substring(1, 3));
-        // console.log(locatItemId);
-      });
-      
-     let a = locatItemId.reduce((a, b) => {
-        return a*1 + b*1 ;
-      }, 0)
-setTotelSize(a)
-      
-    }
-
+const OrdersHome = ({ payRef }) => {
+  const { bookmarkData, isBokmarkLoad, bookmarkMoney, setBookmarkMoney } =
+    useContext(context);
+  const [totalSize, setTotelSize] = useState(0);
+  function openPayModal() {
+    payRef.current.style.right = "0px";
   }
-  
-
-  useEffect(() => {
-    allId();
-  }, []);
 
   return (
     <>
@@ -100,11 +81,11 @@ setTotelSize(a)
               role="tabpanel"
               aria-labelledby="ex1-tab-1"
             >
-              {arr
-                ? arr.map((item) => {
+              {isBokmarkLoad
+                ? bookmarkData.map((item) => {
                     return <OrdersCard data={item} />;
                   })
-                : ""}
+                : "You have not added a product yet"}
             </div>
             <div
               className="tab-pane fade"
@@ -132,7 +113,7 @@ setTotelSize(a)
             </span>
             <span className="discountPriceWrapp d-flex align-items-center">
               <h4 className="discountPriceTitle m-0">$</h4>
-              <h4 className="discountPriceTitle m-0 ps-1">0</h4>
+              <h4 className="discountPriceTitle m-0 ps-1">22</h4>
             </span>
           </div>
           <div className="totalWrapp d-flex align-items-center justify-content-between my-1">
@@ -142,14 +123,16 @@ setTotelSize(a)
             <span className="totalPriceWrapp d-flex align-items-center">
               <h4 className="totalPriceTitle m-0"></h4>
 
-              <h4 className="totalPriceTitle m-0 ps-1">$ {""}
-             {
-              totalSize
-             }
+              <h4 className="totalPriceTitle m-0 ps-1">
+                $ {""}
+                {bookmarkMoney}
               </h4>
             </span>
           </div>
-          <button className="btn btn navigateToPayPage d-block w-100 mt-3">
+          <button
+            className="btn btn navigateToPayPage d-block w-100 mt-3"
+            onClick={() => openPayModal()}
+          >
             Continue to Payment
           </button>
         </div>

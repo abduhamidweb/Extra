@@ -7,14 +7,15 @@ import Router from "./router";
 import "./App.css";
 import FormAddcard from "./Components/FormAddCard/FormAddcard";
 const App = () => {
-  // const foodOrderSet = new Set([{ id: 1,name:"abd"},]);
-  // console.log(foodOrderSet)
-
+  const [bookmarkMoney, setBookmarkMoney] = useState(0);
   const [category, setCategory] = useState([]);
   const [categoryItem, setCategoryItem] = useState([]);
   const [loading, setLoading] = useState(false);
   const [test, setTest] = useState("Test");
   const [addUser, setAddUser] = useState([]);
+  const [bookmarkData, setBookmarkData] = useState([]);
+  const [isBokmarkLoad, setIsBokmarkLoad] = useState(false);
+
   // All Category
   const fetchCategory = async () => {
     const res = await API.getAllCategorys();
@@ -34,6 +35,12 @@ const App = () => {
     } else {
       setCategoryItem(res.meals);
     }
+  };
+  // Fetch Bookmark
+  const fetchById = async (id) => {
+    const res = await API.openById(id);
+    setBookmarkData([...bookmarkData, res.meals[0]]);
+    setIsBokmarkLoad(true);
   };
   // Add user All
   const fetchAddUser = async (addUserName) => {
@@ -83,6 +90,11 @@ const App = () => {
           loading,
           categoryItem,
           addUser,
+          fetchById,
+          bookmarkData,
+          isBokmarkLoad,
+          bookmarkMoney,
+          setBookmarkMoney,
         }}
       >
         <div className="ALL_SECTION_WRAPPER">

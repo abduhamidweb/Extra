@@ -3,7 +3,6 @@ import "./style.scss";
 const MainCard = ({ data: { strMeal, strMealThumb, idMeal } }) => {
   const [cards,setCatds]=useState([])
   const card=useRef();
-console.log(strMealThumb);
 
   return (
 

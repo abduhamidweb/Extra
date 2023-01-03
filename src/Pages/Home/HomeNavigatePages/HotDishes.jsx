@@ -10,11 +10,7 @@ import API from "../../../API/API";
 import MainCard from "../../../Components/MainCard/MainCard";
 import Loading from "../../../Components/Loading/Loading";
 import context from "../../../context/context";
-import App from "../../../App";
 const HotDishes = () => {
-  const localdata = [];
-  const [date2, setDate2]=useState([])
-  const [filterBookmark, setFilterBookmark] = useState([]);
   const {
     lastData,
     loading,
@@ -22,47 +18,8 @@ const HotDishes = () => {
     fetchCategoryName,
     pageNumber,
     paginate,
+    fetchById,
   } = useContext(context);
-  function funcc() {
-    const mainCard = document.querySelector(".row");
-    mainCard.addEventListener("click", (e) => {
-      if (
-        e.target.classList.contains("card") ||
-        e.target.classList.contains("cardNameTitle") ||
-        e.target.classList.contains("price") ||
-        e.target.classList.contains("cardBowls") ||
-        e.target.classList.contains("MainCardImg")
-      ){
-        // setCardIdd(e.target.getAttribute("data-id"));
-        DataCardId(e.target.getAttribute("data-id"));
-        // localStorage.setItem("data", JSON.stringify(foodData));
-      }
-    });
-  }
-  const DataCardId = async (ID) => {
-    const res = await API.openById(ID);
-    res.meals.forEach((item) => {
-      localdata.push(item);
-    });
-
-    const newData = localdata.filter((item, index) => {
-      return (
-        index ===
-        localdata.findIndex((obj) => {
-          return item.idMeal === obj.idMeal;
-        })
-      );
-    });
-0
- 
- 
-    localStorage.setItem("data", JSON.stringify(newData));
-  };
-
-
-  useEffect(() => {
-    funcc();
-  }, [API.openById()]);
 
   return (
     <>
@@ -70,7 +27,7 @@ const HotDishes = () => {
         <div className="col-6">
           <h3>Choose Dishes</h3>
         </div>
-        <div className="col-6 text-end ">
+        <div className="col-6 text-end">
           <div className="select text-end">
             <select
               name=""
@@ -85,7 +42,12 @@ const HotDishes = () => {
             </select>
           </div>
         </div>
-        <div className="row">
+        <div
+          className="row mt-4"
+          onClick={(e) => {
+            fetchById(e.target.getAttribute("data-id"));
+          }}
+        >
           {loading ? (
             lastData.map((item, key) => {
               return <MainCard key={key} data={item} />;

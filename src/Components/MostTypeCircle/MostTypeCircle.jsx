@@ -48,7 +48,7 @@ const MostTypeCircle = () => {
       <div className="mostCircle">
         <RadialBarChart
           width={200}
-          height={250}
+          height={230}
           innerRadius="50%"
           outerRadius="120%"
           data={data}
@@ -59,7 +59,7 @@ const MostTypeCircle = () => {
           <Legend
             iconSize={10}
             width={100}
-            height={140}
+            height={120}
             layout="vertical"
             verticalAlign="middle"
             align="right"

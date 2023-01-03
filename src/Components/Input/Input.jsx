@@ -1,12 +1,24 @@
 import React from "react";
 import "./style.scss";
-const Input = ({ type, text, id, inputClass, plece, val, setValue }) => {
+const Input = ({
+  type,
+  text,
+  id,
+  inputClass,
+  plece,
+  val,
+  setValue,
+  minNumb,
+  maxNumb,
+}) => {
   return (
     <>
       <label htmlFor={id}>{text}</label>
       <input
         type={type}
         id={id}
+        min={minNumb}
+        max={maxNumb}
         autoComplete="off"
         className={inputClass}
         placeholder={plece}
@@ -17,8 +29,6 @@ const Input = ({ type, text, id, inputClass, plece, val, setValue }) => {
       />
     </>
   );
-
-
-}
+};
 
 export default Input;

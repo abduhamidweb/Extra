@@ -1,0 +1,58 @@
+.col-4 {
+  margin-top: 20px;
+}
+.col-4 .card-add {
+  background: #1f1d2b;
+  /* Base / Dark Line */
+  border: 1px dashed #393c49;
+  border-radius: 8px;
+  text-align: center;
+}
+.col-4 .card-add img {
+  margin: 20px auto 14px auto;
+  border-radius: 50%;
+  width: 144px;
+  height: 144px;
+}
+.col-4 .card-add .card-body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.col-4 .card-add .card-body p {
+  width: 144px;
+  margin: auto;
+}
+.col-4 .card-add .card-body .card-price {
+  /* Body / Normal - Regular */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+  text-align: center;
+  /* Text/Light */
+  color: #abbbc2;
+}
+.col-4 .card-add .edit-dish {
+  background: rgba(234, 124, 105, 0.4588235294);
+  border-radius: 0px 0px 8px 8px !important;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  margin-top: 16px;
+}
+.col-4 .card-add .edit-dish .btn-txt {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+  /* Primary Color */
+  color: #f8836e;
+}
+.col-4 .card-add .edit-dish:active {
+  background: white;
+}/*# sourceMappingURL=index.css.map */

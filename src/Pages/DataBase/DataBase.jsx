@@ -69,9 +69,10 @@ const DataBase = () => {
 
   const navigate = useNavigate();
   return (
+    
     <>
       <div className="row m-0 p-0">
-        <div className="col-8 pt-3">
+        <div className="col-8 pt-3 px-0">
           <PageTitle title={"Dashboard"} date={"Tuesday 2 Feb, 2021"} />
           <div className="row">
             <Dashbaord

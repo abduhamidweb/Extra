@@ -182,21 +182,21 @@
     height: 100vh;
   }
 }
-.ordersWrapp1{
-  background: #1F1D2B;
-padding-right: 30px;
+.ordersWrapp1 {
   background: #1f1d2b;
- 
+  padding-right: 30px;
+  background: #1f1d2b;
 }
-.WrapperCard{
+.WrapperCard {
   padding: 20px 0;
 }
-.Pay{
+.Pay {
   position: fixed;
   top: 0;
-  right: 0;
-  background: #1F1D2B;
-  width: 465px;
+  transition: all 0.3s ease;
+  right: -600px;
+  background: #1f1d2b;
+  width: 475px;
   height: 100vh;
   padding: 24px 24px;
   z-index: 111;
@@ -204,11 +204,8 @@ padding-right: 30px;
   // display: none;
   // transform: translateX(510px);
 
-
-  &__Span{
-
-
-    &__title{
+  &__Span {
+    &__title {
       //styleName: Heading/H1;
       font-family: Barlow;
       font-size: 28px;
@@ -218,7 +215,7 @@ padding-right: 30px;
       text-align: left;
       margin: 0;
     }
-    &__deck{
+    &__deck {
       //styleName: Body/Large - Medium;
       font-family: Barlow;
       font-size: 16px;
@@ -226,12 +223,12 @@ padding-right: 30px;
       line-height: 22px;
       letter-spacing: 0em;
       text-align: left;
-      color: #ABBBC2;
-      padding-top: -8px;
+      color: #abbbc2;
+      margin-top: 8px !important;
     }
   }
 
-  &__title{
+  &__title {
     //styleName: Heading/H2;
     font-family: Barlow;
     font-size: 18px;
@@ -239,137 +236,150 @@ padding-right: 30px;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
-    margin: 0;
+    margin: -10px 0px;
   }
 }
 
-
-.Pay-ul{
+.Pay-ul {
   display: flex;
   gap: 20px;
 
-
-  .TabPay{
+  .TabPay {
     // height: 64px;
     width: 101px;
     border-radius: 8px;
     padding: 5px 5px 5px 5px;
-    border:1px solid #393c49;
+    border: 1px solid #393c49;
     flex-direction: column;
+    background-color:  transparent !important;
     align-items: center;
     font-size: 14px;
-    color: white !important;
+    color: #abbbc2 !important ;
     position: relative;
     text-decoration: none;
-
-    .cardichka{
+    text-transform: capitalize;
+    padding: 3px 0 5px 0;
+&:hover{
+  border: 1px solid #393c49;
+}
+    .cardichka {
       font-size: 24px !important;
+      margin-bottom: 10px;
     }
 
-    .payCard{
-
-
-
-      h4{
+    .payCard {
+      h4 {
         font-size: 16px;
       }
     }
   }
 }
 
-.ptichka{
+.ptichka {
   position: absolute;
-  top: 1 !important;
-  right: 0;
+  top: 5px !important;
+  right: 5px;
   color: #ea7c69;
   display: none;
 }
-.Pay-ul li a.active .ptichka{
-display: block;
+
+.Pay-ul {
+  .nav-item {
+    .active {
+      .ptichka {
+        display: block;
+      }
+    }
+  }
+}
+.Pay-ul {
+  .nav-item {
+    .active {
+      border-color: #fff !important;
+      color: #fff !important ;
+    }
+  }
 }
 
+.Tab1Form {
+  // background-color: red !important;
+  align-items: flex-start;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  margin-top: 0px !important;
 
+  label {
+    //styleName: Body / Normal - Medium;
+    font-family: Barlow;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    margin: 14px 0px 2px 0px !important;
+  }
+  input {
+    border: 1px solid #393c49;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+  }
 
-
-.Tab1Form{
-    // background-color: red !important;
-    align-items: flex-start;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-
-    label{
-      //styleName: Body / Normal - Medium;
-      font-family: Barlow;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 18px;
-      letter-spacing: 0em;
-      text-align: left;
-      color: #FFFFFF;
-      margin: 5px 0px 2px 0px;
-    }
-    input{
-      border: 1px solid #393C49;
-      padding: 10px;
-      outline: none;
-      width: 100%;
-      }
-    hr{
-      width: 100%;
-    }
-  .Tab1Input1{
+  hr {
+    width: 100%;
+  }
+  .Tab1Input1 {
     text-align: left !important;
     padding: 0 !important;
     margin: 0 !important;
-
   }
-  .smalInput{
+  .smalInput {
     width: 100%;
     display: flex;
     gap: 14px;
-    
-    span{
-      width: 48%;
 
+    span {
+      width: 48%;
     }
   }
-  .smalInput2{
+  .smalInput2 {
     width: 100%;
     gap: 14px;
     margin-top: -20px;
     // background-color: red;
   }
-  .Tab1Select{
-     width: 100%;
-     border: 1px solid #393C49;
-     background: #1F1D2B;
-     border-radius: 8px;
-     overflow: hidden;
-     height: 43px;
-     margin-top: 2px;
-     padding: 0 20px !important;
-     display: flex;
-     align-items: center;
+  .Tab1Select {
+    width: 100%;
+    border: 1px solid #393c49;
+    background: #1f1d2b;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 43px;
+    margin-top: 2px;
+    padding: 0 20px !important;
+    display: flex;
+    align-items: center;
   }
-  select{
+  select {
     width: 100%;
     border: none;
     outline: none;
   }
-  span{
-    width: 50%
+
+  span {
+    width: 50%;
   }
 }
-.paymennt{
+.paymennt {
   gap: 14px;
+  margin-top: 20px !important;
 
-
-
-  .Cancel{
-    border: 1px solid #EA7C69;
+  .Cancel {
+    border: 1px solid #ea7c69;
     background: transparent;
-    color: #EA7C69;
+    color: #ea7c69;
     font-family: Barlow;
     font-size: 14px;
     font-weight: 600;
@@ -378,19 +388,18 @@ display: block;
     text-align: center;
     padding: 10px 34px;
     border-radius: 8px;
-
   }
-  .Confirm{
-      background-color: #EA7C69;
-      border: none;
-      box-shadow: 0px 8px 24px 0px #EA7C6966;
-      color: white;
-      font-family: Barlow;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 20px;
-      letter-spacing: 0em;
-      text-align: center;
+  .Confirm {
+    background-color: #ea7c69;
+    border: none;
+    box-shadow: 0px 8px 24px 0px #ea7c6966;
+    color: white;
+    font-family: Barlow;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
     padding: 10px 34px;
     border-radius: 8px;
   }

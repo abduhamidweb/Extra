@@ -12,7 +12,7 @@ const PageTitle = ({ input, title, date, icon }) => {
       <section>
         <div className="row">
           <div className="col-6">
-            <h2>{title}</h2>
+            <h2 className="m-0">{title}</h2>
             <p>{date ? date : ""}</p>
           </div>
           <div className="col-6 text-end">

@@ -1,17 +1,23 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect } from "react";
+import { useContext } from "react";
 import context from "../../context/context";
 import "./styleOrders.css";
 import Input from "../Input/Input";
 const OrdersCard = ({
   data: { strMeal, idMeal, strMealThumb, strMeasure6 },
 }) => {
-
-  const [orderSize, setOrderSize]=useState(1)
-
+  const [orderSize, setOrderSize] = useState(1);
+  const [dish, setDish] = useState("0");
+  const { bookmarkMoney, setBookmarkMoney } = useContext(context);
 
   return (
     <>
-      <div className="orderCard my-2">
+      <div
+        className="orderCard my-2"
+        onClick={(e) => {
+          setDish(e.target);
+        }}
+      >
         <div className="orderCardTopInfo d-flex align-items-center">
           <div className="ordersInfo d-flex align-items-center">
             <div className="orderImg">
@@ -36,7 +42,8 @@ const OrdersCard = ({
               setValue={setOrderSize}
             />
             <div className="priceSize">
-              $ {orderSize * idMeal.substring(1, 3)}
+              $ {orderSize * 3}
+              {setBookmarkMoney(orderSize * 3)}
             </div>
           </div>
         </div>
@@ -50,8 +57,8 @@ const OrdersCard = ({
             />
           </div>
           <div className="orderBynWrapp">
-            <button className="btn deleteCardBtn">
-              <i className="bi bi-trash3"></i>
+            <button className="btn deleteCardBtn" data-id={idMeal}>
+              <i className="bi bi-trash3" data-id={idMeal}></i>
             </button>
           </div>
         </div>

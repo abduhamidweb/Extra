@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, memo } from "react";
 import style from "./sidebar.module.scss";
 import LogoMenu from "../../assets/Vector.svg";
 import Logout from "../../assets/Vector.png";
 import SidebarItem from "./SidebarItem";
 
-const Sidebar = () => {
+const Sidebar = memo(function Memo() {
   return (
     <>
       <section className={style.Sidebar}>
@@ -19,11 +19,9 @@ const Sidebar = () => {
             <SidebarItem link="/news" icon="mail" />
             <SidebarItem link="/notification" icon="bell" />
             <SidebarItem link="/settings" icon="cog" />
-            <li 
+            <li
               className={style.navigationItemLogout}
-              onClick={() =>
-                localStorage.removeItem("userData")
-              }
+              onClick={() => localStorage.removeItem("userData")}
             >
               <img src={Logout} className={style.LogoMenu} />
             </li>
@@ -43,6 +41,6 @@ const Sidebar = () => {
       </section>
     </>
   );
-};
+});
 
 export default Sidebar;
