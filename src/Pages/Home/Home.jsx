@@ -6,7 +6,7 @@ import NavigateLinks from "../../Components/NavigateLinks/NavigateLinks";
 import OrdersHome from "../../Components/OrdersHome/OrdersHome";
 import Input from "../../Components/Input/Input";
 const Home = () => {
-  // start
+  // start2
   const payRef = useRef();
 
   const [cardName, setCardName] = useState("");
