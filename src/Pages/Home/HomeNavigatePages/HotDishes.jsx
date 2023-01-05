@@ -11,6 +11,7 @@ import MainCard from "../../../Components/MainCard/MainCard";
 import Loading from "../../../Components/Loading/Loading";
 import context from "../../../context/context";
 const HotDishes = () => {
+  // start
   const {
     lastData,
     loading,

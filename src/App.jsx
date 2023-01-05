@@ -6,6 +6,7 @@ import Sidebar from "./Components/SideBar/Sidebar";
 import Router from "./router";
 import "./App.css";
 import FormAddcard from "./Components/FormAddCard/FormAddcard";
+// start
 const App = () => {
   const [bookmarkMoney, setBookmarkMoney] = useState(0);
   const [category, setCategory] = useState([]);
