@@ -4,7 +4,7 @@ import OrdersCard from './OrdersCard'
 import context from '../../context/context'
 import './styleOrders.css'
 const OrdersHome = ({ payRef }) => {
-  const { bookmarkData, isBokmarkLoad, bookmarkMoney, setBookmarkMoney } =
+  const { bookmarkData, isBokmarkLoad, bookmarkMoney, setBookmarkMoney, k } =
     useContext(context)
   const [filterBookmark, setFilterBookmark] = useState([])
   const newData = bookmarkData.filter((item, index) => {
@@ -15,7 +15,12 @@ const OrdersHome = ({ payRef }) => {
       })
     )
   })
-  0
+  
+
+  // const sumWithInitial = k.reduce((accumulator, currentValue) => {
+  //   accumulator + currentValue
+  // }, 0)
+
   const [totalSize, setTotelSize] = useState(0)
   function openPayModal() {
     payRef.current.style.right = '0px'
@@ -132,10 +137,7 @@ const OrdersHome = ({ payRef }) => {
             <span className='totalPriceWrapp d-flex align-items-center'>
               <h4 className='totalPriceTitle m-0'></h4>
 
-              <h4 className='totalPriceTitle m-0 ps-1'>
-                $ {''}
-                {bookmarkMoney}
-              </h4>
+              <h4 className='totalPriceTitle m-0 ps-1'>{}0</h4>
             </span>
           </div>
           <button

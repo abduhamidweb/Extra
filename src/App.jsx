@@ -8,7 +8,8 @@ import "./App.css";
 import FormAddcard from "./Components/FormAddCard/FormAddcard";
 // start
 const App = () => {
-  const [bookmarkMoney, setBookmarkMoney] = useState(0);
+  const [bookmarkMoney, setBookmarkMoney] = useState([]);
+  const [r, setR] = useState([])
   const [category, setCategory] = useState([]);
   const [categoryItem, setCategoryItem] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -16,7 +17,7 @@ const App = () => {
   const [addUser, setAddUser] = useState([]);
   const [bookmarkData, setBookmarkData] = useState([]);
   const [isBokmarkLoad, setIsBokmarkLoad] = useState(false);
-
+let k =[]
   // All Category
   const fetchCategory = async () => {
     const res = await API.getAllCategorys();
@@ -96,9 +97,12 @@ const App = () => {
           isBokmarkLoad,
           bookmarkMoney,
           setBookmarkMoney,
+          k,
+          setR,
+          r
         }}
       >
-        <div className="ALL_SECTION_WRAPPER">
+        <div className='ALL_SECTION_WRAPPER'>
           <section>
             <Sidebar />
           </section>
@@ -108,6 +112,6 @@ const App = () => {
         </div>
       </context.Provider>
     </>
-  );
+  )
 };
 export default App;
